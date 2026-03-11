@@ -2,178 +2,129 @@
 import { useMemo, useState } from "react";
 import data from "../public/data/analysis.json";
 
-const fmt = (n) => (typeof n === "number" ? n.toLocaleString("de-DE") : n);
+const nf = new Intl.NumberFormat("de-DE");
+const f = (v) => (typeof v === "number" ? nf.format(v) : v);
 
-function Card({ children, className = "" }) {
-  return <section className={`card ${className}`}>{children}</section>;
-}
-
-function Kpi({ label, value }) {
+function Stat({ label, value }) {
   return (
-    <Card className="kpi">
-      <div className="kpi-label">{label}</div>
-      <div className="kpi-value">{value}</div>
-    </Card>
+    <div className="stat">
+      <div className="statLabel">{label}</div>
+      <div className="statValue">{value}</div>
+    </div>
   );
 }
 
-function FancyBars({ title, items }) {
-  const max = Math.max(1, ...items.map((x) => x.hours || x.value || 0));
+function Ranking({ title, items }) {
+  const max = Math.max(1, ...items.map((i) => i.hours ?? i.value ?? 0));
   return (
-    <Card>
+    <section className="panel">
       <h3>{title}</h3>
-      <div className="rows">
-        {items.map((x, i) => {
-          const v = x.hours ?? x.value ?? 0;
-          const pct = (v / max) * 100;
+      <ul className="rankList">
+        {items.map((it, idx) => {
+          const val = it.hours ?? it.value ?? 0;
+          const pct = Math.max(4, Math.round((val / max) * 100));
           return (
-            <button key={`${x.name}-${i}`} className="row" title={x.name}>
-              <span className="name">{x.name}</span>
-              <span className="track">
-                <span className="fill" style={{ width: `${pct}%` }} />
-              </span>
-              <span className="val">{fmt(v)}</span>
-            </button>
+            <li key={`${it.name}-${idx}`} className="row">
+              <div className="rowHead">
+                <span className="rank">#{idx + 1}</span>
+                <span className="name">{it.name}</span>
+                <span className="value">{f(val)}</span>
+              </div>
+              <div className="bar"><span style={{ width: `${pct}%` }} /></div>
+            </li>
           );
         })}
-      </div>
-    </Card>
+      </ul>
+    </section>
   );
 }
 
 export default function Home() {
   const [tab, setTab] = useState("music");
-  const [query, setQuery] = useState("");
+  const [q, setQ] = useState("");
 
-  const current = tab === "music" ? data.music : data.podcasts;
-  const primary = tab === "music" ? current.topArtists : current.topShows;
-  const secondary = tab === "music" ? current.topTracks : current.topEpisodes;
+  const cur = tab === "music" ? data.music : data.podcasts;
+  const mainList = tab === "music" ? cur.topArtists : cur.topShows;
+  const subList = tab === "music" ? cur.topTracks : cur.topEpisodes;
 
-  const filteredA = useMemo(
-    () => primary.filter((x) => x.name.toLowerCase().includes(query.toLowerCase())).slice(0, 20),
-    [primary, query]
+  const filteredMain = useMemo(
+    () => mainList.filter((x) => x.name.toLowerCase().includes(q.toLowerCase())).slice(0, 20),
+    [mainList, q]
   );
-  const filteredB = useMemo(
-    () => secondary.filter((x) => x.name.toLowerCase().includes(query.toLowerCase())).slice(0, 20),
-    [secondary, query]
+  const filteredSub = useMemo(
+    () => subList.filter((x) => x.name.toLowerCase().includes(q.toLowerCase())).slice(0, 20),
+    [subList, q]
   );
 
   return (
     <main className="page">
-      <div className="glow glow1" />
-      <div className="glow glow2" />
-
-      <header className="hero">
+      <header className="header panel">
         <div>
-          <p className="eyebrow">Spotify Analyse</p>
-          <h1>Luxury Dark Dashboard</h1>
-          <p className="sub">
-            {data.meta.filesCount} Dateien · klare Trennung nach Musik & Podcasts ·{" "}
-            <a href={data.meta.contextLink} target="_blank" rel="noreferrer">Datenreferenz</a>
-          </p>
+          <p className="overline">Spotify Analyse</p>
+          <h1>Dashboard</h1>
+          <p className="meta">{data.meta.filesCount} Dateien · Musik und Podcasts getrennt · <a href={data.meta.contextLink} target="_blank" rel="noreferrer">Datenreferenz</a></p>
         </div>
-        <div className="tabs">
+        <div className="tabs" role="tablist" aria-label="Modus">
           <button className={tab === "music" ? "active" : ""} onClick={() => setTab("music")}>Musik</button>
           <button className={tab === "podcasts" ? "active" : ""} onClick={() => setTab("podcasts")}>Podcasts</button>
         </div>
       </header>
 
-      <div className="searchWrap">
-        <input
-          value={query}
-          onChange={(e) => setQuery(e.target.value)}
-          placeholder={tab === "music" ? "Suche Artist oder Track…" : "Suche Show oder Episode…"}
-        />
+      <section className="panel sticky">
+        <input value={q} onChange={(e) => setQ(e.target.value)} placeholder={tab === "music" ? "Suche Artist oder Track" : "Suche Show oder Episode"} />
+      </section>
+
+      <section className="stats">
+        <Stat label="Gesamt Events" value={f(data.overview.events)} />
+        <Stat label="Gesamt Stunden" value={f(data.overview.hours)} />
+        <Stat label={tab === "music" ? "Musik Events" : "Podcast Events"} value={f(cur.kpis.events)} />
+        <Stat label={tab === "music" ? "Musik Stunden" : "Podcast Stunden"} value={f(cur.kpis.hours)} />
+        {tab === "music" && <Stat label="Skip %" value={cur.kpis.skipRate} />}
+        {tab === "music" && <Stat label="Shuffle %" value={cur.kpis.shuffleRate} />}
+      </section>
+
+      <div className="grid">
+        <Ranking title={tab === "music" ? "Top Artists" : "Top Shows"} items={filteredMain} />
+        <Ranking title={tab === "music" ? "Top Tracks" : "Top Episodes"} items={filteredSub} />
       </div>
 
-      <section className="kpis">
-        <Kpi label="Gesamt Events" value={fmt(data.overview.events)} />
-        <Kpi label="Gesamt Stunden" value={fmt(data.overview.hours)} />
-        <Kpi label={tab === "music" ? "Musik Events" : "Podcast Events"} value={fmt(current.kpis.events)} />
-        <Kpi label={tab === "music" ? "Musik Stunden" : "Podcast Stunden"} value={fmt(current.kpis.hours)} />
-        {tab === "music" && <Kpi label="Skip %" value={current.kpis.skipRate} />}
-        {tab === "music" && <Kpi label="Shuffle %" value={current.kpis.shuffleRate} />}
-      </section>
-
-      <section className="grid">
-        <FancyBars title={tab === "music" ? "Top Artists" : "Top Shows"} items={filteredA} />
-        <FancyBars title={tab === "music" ? "Top Tracks" : "Top Episodes"} items={filteredB} />
-      </section>
-
       <style jsx>{`
-        .page {
-          min-height: 100vh;
-          background: radial-gradient(1200px 500px at 20% -10%, #2b1a4f 0%, #090c16 45%, #070a13 100%);
-          color: #f7f3ea;
-          padding: 24px;
-          max-width: 1440px;
-          margin: 0 auto;
-          position: relative;
-          overflow: hidden;
-          font-family: "Georgia", "Times New Roman", serif;
-        }
-        .glow { position: absolute; border-radius: 999px; filter: blur(70px); pointer-events: none; }
-        .glow1 { width: 260px; height: 260px; background: rgba(187, 133, 66, 0.25); top: -70px; right: -40px; }
-        .glow2 { width: 300px; height: 300px; background: rgba(107, 76, 174, 0.22); bottom: -120px; left: -80px; }
+        .page { min-height: 100vh; background: #070b14; color: #eaf0ff; padding: 14px; max-width: 1200px; margin: 0 auto; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; }
+        .panel { background: #101827; border: 1px solid #1f2b40; border-radius: 14px; padding: 14px; }
+        .header { display: grid; gap: 12px; }
+        .overline { color: #93a6ce; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; margin: 0 0 4px; }
+        h1 { margin: 0; font-size: 32px; line-height: 1.05; }
+        .meta { color: #9eb0d5; margin: 6px 0 0; font-size: 14px; }
+        .meta a { color: #89b4ff; }
 
-        .hero { display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; flex-wrap: wrap; margin-bottom: 10px; position: relative; z-index: 1; }
-        .eyebrow { letter-spacing: 0.18em; text-transform: uppercase; color: #b48a4f; font-size: 11px; margin-bottom: 10px; font-family: Arial, sans-serif; }
-        h1 { margin: 0; font-size: 44px; line-height: 1; font-weight: 600; }
-        .sub { color: #c8c2b8; margin-top: 10px; font-family: Arial, sans-serif; }
-        a { color: #e5b56c; }
+        .tabs { display: flex; gap: 8px; }
+        .tabs button { flex: 1; padding: 10px 12px; border-radius: 10px; border: 1px solid #304160; background: #121d30; color: #d7e4ff; font-weight: 600; }
+        .tabs .active { background: #2a4f8f; border-color: #4f79bf; }
 
-        .tabs { display: flex; gap: 10px; }
-        .tabs button {
-          border: 1px solid #3e2f1d;
-          color: #e4dccf;
-          background: linear-gradient(180deg, #1a1520, #12101a);
-          padding: 10px 16px;
-          border-radius: 999px;
-          cursor: pointer;
-          font-family: Arial, sans-serif;
-        }
-        .tabs .active {
-          background: linear-gradient(180deg, #3f2b16, #291d11);
-          border-color: #8e6736;
-          box-shadow: 0 0 0 1px rgba(204, 149, 78, 0.35);
-        }
+        .sticky { position: sticky; top: 0; z-index: 5; margin-top: 10px; backdrop-filter: blur(4px); }
+        input { width: 100%; background: #0b1424; border: 1px solid #2a3d5f; color: #eaf0ff; border-radius: 10px; padding: 12px; font-size: 16px; }
 
-        .searchWrap { position: sticky; top: 0; z-index: 4; padding: 10px 0; backdrop-filter: blur(5px); }
-        input {
-          width: 100%; padding: 13px 16px; border-radius: 14px;
-          border: 1px solid #3f3122; background: rgba(21, 17, 14, 0.82); color: #f4ecde;
-          font-family: Arial, sans-serif; font-size: 15px;
-        }
+        .stats { margin-top: 10px; display: grid; gap: 10px; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        .stat { background: #0f1a2b; border: 1px solid #21324f; border-radius: 12px; padding: 12px; }
+        .statLabel { color: #9eb0d5; font-size: 12px; }
+        .statValue { font-size: 24px; margin-top: 6px; font-weight: 800; }
 
-        .kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 10px; margin: 10px 0 14px; }
-        .card {
-          background: linear-gradient(180deg, rgba(24, 19, 16, 0.84), rgba(13, 12, 16, 0.92));
-          border: 1px solid #34281f; border-radius: 16px; padding: 14px;
-          box-shadow: inset 0 1px 0 rgba(255, 231, 200, 0.05), 0 10px 30px rgba(0,0,0,0.24);
-          position: relative; z-index: 1;
-        }
-        .kpi-label { color: #c9b8a0; font-size: 12px; font-family: Arial, sans-serif; }
-        .kpi-value { font-size: 28px; margin-top: 6px; color: #f8e7c9; }
+        .grid { display: grid; gap: 12px; margin-top: 12px; }
+        h3 { margin: 0 0 10px; font-size: 20px; }
+        .rankList { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+        .row { background: #0d1626; border: 1px solid #1f314e; border-radius: 10px; padding: 8px; }
+        .rowHead { display: grid; grid-template-columns: auto 1fr auto; gap: 8px; align-items: center; margin-bottom: 6px; }
+        .rank { color: #85a8ff; font-weight: 700; font-size: 12px; }
+        .name { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 14px; }
+        .value { color: #b9cdf8; font-weight: 700; font-size: 13px; }
+        .bar { height: 8px; border-radius: 99px; background: #18263f; overflow: hidden; }
+        .bar span { display: block; height: 100%; background: linear-gradient(90deg,#5ea1ff,#67e8f9); }
 
-        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-        h3 { margin: 0 0 10px; font-size: 22px; color: #f1dfc1; }
-
-        .rows { display: flex; flex-direction: column; gap: 8px; }
-        .row {
-          display: grid; grid-template-columns: 1.4fr 2fr auto; gap: 10px; align-items: center;
-          background: rgba(14, 12, 13, 0.7); border: 1px solid #34281f; border-radius: 12px;
-          padding: 8px 10px; color: #f1eadb; text-align: left; cursor: pointer;
-        }
-        .row:hover { border-color: #8a6539; transform: translateY(-1px); }
-        .name { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-family: Arial, sans-serif; }
-        .track { height: 9px; background: #1b1717; border-radius: 999px; overflow: hidden; }
-        .fill { display: block; height: 100%; background: linear-gradient(90deg, #a86f2d, #f0c27f, #8b63d0); }
-        .val { color: #e7c792; font-variant-numeric: tabular-nums; font-family: Arial, sans-serif; }
-
-        @media (max-width: 1000px) {
-          .grid { grid-template-columns: 1fr; }
-          h1 { font-size: 34px; }
-          .row { grid-template-columns: 1fr 1.4fr auto; }
+        @media (min-width: 860px) {
+          .header { grid-template-columns: 1fr auto; align-items: end; }
+          .tabs button { min-width: 140px; flex: initial; }
+          .stats { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+          .grid { grid-template-columns: 1fr 1fr; }
         }
       `}</style>
     </main>
