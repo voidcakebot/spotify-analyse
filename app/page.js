@@ -1,63 +1,51 @@
 "use client";
-
-import { useEffect, useMemo, useState } from "react";
-import dynamic from "next/dynamic";
-
-const Chart = dynamic(() => import("react-apexcharts"), { ssr: false });
+import { useMemo, useState } from "react";
+import data from "../public/data/analysis.json";
 
 const fmt = (n) => (typeof n === "number" ? n.toLocaleString("de-DE") : n);
 
-function Card({ children }) {
-  return <div className="card">{children}</div>;
-}
+function Card({ children }) { return <div className="card">{children}</div>; }
+function Kpi({ label, value }) { return <Card><div className="kpi-label">{label}</div><div className="kpi-value">{value}</div></Card>; }
 
-function Kpi({ label, value }) {
+function Bars({ title, items }) {
+  const max = Math.max(1, ...items.map((x) => x.hours || x.value || 0));
   return (
     <Card>
-      <div className="kpi-label">{label}</div>
-      <div className="kpi-value">{value}</div>
+      <h3>{title}</h3>
+      <div className="bars">
+        {items.map((x, i) => {
+          const v = x.hours ?? x.value ?? 0;
+          const w = (v / max) * 100;
+          return (
+            <button key={`${x.name}-${i}`} className="barrow" title={x.name}>
+              <span className="label">{x.name}</span>
+              <span className="meter"><span style={{ width: `${w}%` }} /></span>
+              <span className="num">{fmt(v)}</span>
+            </button>
+          );
+        })}
+      </div>
     </Card>
   );
 }
 
-const baseOpts = {
-  chart: { toolbar: { show: false }, foreColor: "#b8c7e8" },
-  dataLabels: { enabled: false },
-  grid: { borderColor: "#243252" },
-  theme: { mode: "dark" },
-  tooltip: { theme: "dark" },
-};
-
 export default function Home() {
-  const [data, setData] = useState(null);
   const [tab, setTab] = useState("music");
   const [q, setQ] = useState("");
 
-  useEffect(() => {
-    fetch("/data/analysis.json").then((r) => r.json()).then(setData);
-  }, []);
-
-  if (!data) return <main className="page">Lade Spotify Analyse…</main>;
-
   const current = tab === "music" ? data.music : data.podcasts;
-  const firstList = tab === "music" ? current.topArtists : current.topShows;
-  const secondList = tab === "music" ? current.topTracks : current.topEpisodes;
+  const first = tab === "music" ? current.topArtists : current.topShows;
+  const second = tab === "music" ? current.topTracks : current.topEpisodes;
 
-  const filteredA = useMemo(
-    () => firstList.filter((x) => (x?.name || "").toLowerCase().includes(q.toLowerCase())).slice(0, 20),
-    [firstList, q]
-  );
-  const filteredB = useMemo(
-    () => secondList.filter((x) => (x?.name || "").toLowerCase().includes(q.toLowerCase())).slice(0, 20),
-    [secondList, q]
-  );
+  const listA = useMemo(() => first.filter((x) => (x.name || "").toLowerCase().includes(q.toLowerCase())).slice(0, 20), [first, q]);
+  const listB = useMemo(() => second.filter((x) => (x.name || "").toLowerCase().includes(q.toLowerCase())).slice(0, 20), [second, q]);
 
   return (
     <main className="page">
       <header className="top">
         <div>
           <h1>Spotify Analyse Dashboard</h1>
-          <p>{data.meta.filesCount} Dateien · getrennt nach Musik und Podcasts · <a href={data.meta.contextLink} target="_blank" rel="noreferrer">Spotify Datenhilfe</a></p>
+          <p>{data.meta.filesCount} Dateien · Musik/Podcasts getrennt · <a href={data.meta.contextLink} target="_blank" rel="noreferrer">Spotify Datenhilfe</a></p>
         </div>
         <div className="tabs">
           <button className={tab === "music" ? "active" : ""} onClick={() => setTab("music")}>Musik</button>
@@ -79,52 +67,14 @@ export default function Home() {
       </section>
 
       <section className="grid2">
-        <Card>
-          <h3>Monatsverlauf (Stunden)</h3>
-          <Chart
-            type="line"
-            height={320}
-            series={[{ name: "Stunden", data: current.time.month.map((x) => x.value) }]}
-            options={{ ...baseOpts, xaxis: { categories: current.time.month.map((x) => x.name) }, stroke: { curve: "smooth", width: 3 }, colors: ["#2dd4bf"] }}
-          />
-        </Card>
-        <Card>
-          <h3>Jahresvergleich (Stunden)</h3>
-          <Chart
-            type="bar"
-            height={320}
-            series={[{ name: "Stunden", data: current.time.year.map((x) => x.value) }]}
-            options={{ ...baseOpts, xaxis: { categories: current.time.year.map((x) => x.name) }, colors: ["#f59e0b"], plotOptions: { bar: { borderRadius: 6 } } }}
-          />
-        </Card>
-      </section>
-
-      <section className="grid2">
-        <Card>
-          <h3>{tab === "music" ? "Top Artists" : "Top Shows"}</h3>
-          <Chart
-            type="bar"
-            height={380}
-            series={[{ name: "Stunden", data: filteredA.map((x) => x.hours) }]}
-            options={{ ...baseOpts, xaxis: { categories: filteredA.map((x) => x.name) }, colors: ["#7c9cff"], plotOptions: { bar: { borderRadius: 6, horizontal: true } } }}
-          />
-        </Card>
-        <Card>
-          <h3>{tab === "music" ? "Top Tracks" : "Top Episodes"}</h3>
-          <Chart
-            type="bar"
-            height={380}
-            series={[{ name: "Stunden", data: filteredB.map((x) => x.hours) }]}
-            options={{ ...baseOpts, xaxis: { categories: filteredB.map((x) => x.name) }, colors: ["#f472b6"], plotOptions: { bar: { borderRadius: 6, horizontal: true } } }}
-          />
-        </Card>
+        <Bars title={tab === "music" ? "Top Artists" : "Top Shows"} items={listA} />
+        <Bars title={tab === "music" ? "Top Tracks" : "Top Episodes"} items={listB} />
       </section>
 
       <style jsx>{`
         .page{min-height:100vh;background:linear-gradient(180deg,#070b14,#0a1020);color:#e9efff;padding:22px;max-width:1400px;margin:0 auto}
         .top{display:flex;justify-content:space-between;gap:12px;align-items:flex-end;flex-wrap:wrap}
-        h1{margin:0 0 6px;font-size:30px} p{color:#9fb1d9;margin:0}
-        a{color:#7db3ff}
+        h1{margin:0 0 6px;font-size:30px} p{color:#9fb1d9;margin:0} a{color:#7db3ff}
         .tabs{display:flex;gap:8px}
         .tabs button{background:#15213a;border:1px solid #2a3a5e;color:#cdd8f2;padding:10px 16px;border-radius:10px;cursor:pointer}
         .tabs .active{background:#284073;color:#fff}
@@ -134,8 +84,14 @@ export default function Home() {
         .grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px}
         .card{background:linear-gradient(180deg,#10192d,#0f1729);border:1px solid #283756;border-radius:14px;padding:14px}
         .kpi-label{color:#95abd9;font-size:12px}.kpi-value{font-size:27px;font-weight:700;margin-top:6px}
-        h3{margin:0 0 8px}
-        @media(max-width:1000px){.grid2{grid-template-columns:1fr}}
+        h3{margin:0 0 10px}
+        .bars{display:flex;flex-direction:column;gap:8px}
+        .barrow{display:grid;grid-template-columns:1.4fr 2fr auto;gap:10px;align-items:center;background:#0e1628;border:1px solid #243656;border-radius:10px;padding:8px 10px;text-align:left;color:#e9efff}
+        .label{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+        .meter{height:10px;background:#1b2a45;border-radius:999px;overflow:hidden}
+        .meter span{display:block;height:100%;background:linear-gradient(90deg,#7c9cff,#2dd4bf)}
+        .num{font-variant-numeric:tabular-nums;color:#a9bee7}
+        @media(max-width:1000px){.grid2{grid-template-columns:1fr}.barrow{grid-template-columns:1fr 1.3fr auto}}
       `}</style>
     </main>
   );
