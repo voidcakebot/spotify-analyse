@@ -1,825 +1,3417 @@
 {
-  "filesCount": 12,
-  "kpis": {
+  "meta": {
+    "project": "Spotify Analyse",
+    "filesCount": 12,
+    "contextLink": "https://support.spotify.com/us/article/understanding-your-data/"
+  },
+  "overview": {
     "events": 187132,
     "hours": 8029.5,
-    "tracks": 179767,
-    "podcasts": 7365,
-    "skipRate": 9.0,
-    "shuffleRate": 47.75,
-    "offlineRate": 1.83
+    "musicEvents": 179767,
+    "musicHours": 5656.27,
+    "podcastEvents": 7365,
+    "podcastHours": 2373.22
   },
-  "yearHours": [
-    {
-      "name": "2014",
-      "hours": 3.58
+  "music": {
+    "kpis": {
+      "events": 179767,
+      "hours": 5656.27,
+      "skipRate": 8.77,
+      "shuffleRate": 49.66
     },
-    {
-      "name": "2016",
-      "hours": 492.46
+    "time": {
+      "year": [
+        {
+          "name": "2014",
+          "value": 3.58
+        },
+        {
+          "name": "2016",
+          "value": 492.46
+        },
+        {
+          "name": "2017",
+          "value": 1027.86
+        },
+        {
+          "name": "2018",
+          "value": 766.93
+        },
+        {
+          "name": "2019",
+          "value": 666.98
+        },
+        {
+          "name": "2020",
+          "value": 638.16
+        },
+        {
+          "name": "2021",
+          "value": 372.5
+        },
+        {
+          "name": "2022",
+          "value": 644.84
+        },
+        {
+          "name": "2023",
+          "value": 519.95
+        },
+        {
+          "name": "2024",
+          "value": 398.03
+        },
+        {
+          "name": "2025",
+          "value": 125.0
+        }
+      ],
+      "month": [
+        {
+          "name": "2014-03",
+          "value": 2.71
+        },
+        {
+          "name": "2014-04",
+          "value": 0.81
+        },
+        {
+          "name": "2014-05",
+          "value": 0.06
+        },
+        {
+          "name": "2016-07",
+          "value": 37.67
+        },
+        {
+          "name": "2016-08",
+          "value": 9.16
+        },
+        {
+          "name": "2016-09",
+          "value": 96.78
+        },
+        {
+          "name": "2016-10",
+          "value": 101.61
+        },
+        {
+          "name": "2016-11",
+          "value": 117.84
+        },
+        {
+          "name": "2016-12",
+          "value": 129.38
+        },
+        {
+          "name": "2017-01",
+          "value": 59.6
+        },
+        {
+          "name": "2017-02",
+          "value": 82.42
+        },
+        {
+          "name": "2017-03",
+          "value": 83.81
+        },
+        {
+          "name": "2017-04",
+          "value": 111.66
+        },
+        {
+          "name": "2017-05",
+          "value": 142.61
+        },
+        {
+          "name": "2017-06",
+          "value": 141.95
+        },
+        {
+          "name": "2017-07",
+          "value": 127.94
+        },
+        {
+          "name": "2017-08",
+          "value": 58.2
+        },
+        {
+          "name": "2017-09",
+          "value": 47.19
+        },
+        {
+          "name": "2017-10",
+          "value": 49.63
+        },
+        {
+          "name": "2017-11",
+          "value": 44.69
+        },
+        {
+          "name": "2017-12",
+          "value": 78.16
+        },
+        {
+          "name": "2018-01",
+          "value": 103.82
+        },
+        {
+          "name": "2018-02",
+          "value": 82.01
+        },
+        {
+          "name": "2018-03",
+          "value": 117.27
+        },
+        {
+          "name": "2018-04",
+          "value": 60.53
+        },
+        {
+          "name": "2018-05",
+          "value": 64.17
+        },
+        {
+          "name": "2018-06",
+          "value": 41.68
+        },
+        {
+          "name": "2018-07",
+          "value": 55.54
+        },
+        {
+          "name": "2018-08",
+          "value": 80.81
+        },
+        {
+          "name": "2018-09",
+          "value": 22.53
+        },
+        {
+          "name": "2018-10",
+          "value": 30.56
+        },
+        {
+          "name": "2018-11",
+          "value": 44.21
+        },
+        {
+          "name": "2018-12",
+          "value": 63.8
+        },
+        {
+          "name": "2019-01",
+          "value": 60.03
+        },
+        {
+          "name": "2019-02",
+          "value": 47.05
+        },
+        {
+          "name": "2019-03",
+          "value": 42.98
+        },
+        {
+          "name": "2019-04",
+          "value": 42.58
+        },
+        {
+          "name": "2019-05",
+          "value": 42.4
+        },
+        {
+          "name": "2019-06",
+          "value": 63.01
+        },
+        {
+          "name": "2019-07",
+          "value": 50.94
+        },
+        {
+          "name": "2019-08",
+          "value": 73.46
+        },
+        {
+          "name": "2019-09",
+          "value": 58.8
+        },
+        {
+          "name": "2019-10",
+          "value": 62.02
+        },
+        {
+          "name": "2019-11",
+          "value": 63.21
+        },
+        {
+          "name": "2019-12",
+          "value": 60.51
+        },
+        {
+          "name": "2020-01",
+          "value": 60.94
+        },
+        {
+          "name": "2020-02",
+          "value": 58.95
+        },
+        {
+          "name": "2020-03",
+          "value": 62.67
+        },
+        {
+          "name": "2020-04",
+          "value": 43.68
+        },
+        {
+          "name": "2020-05",
+          "value": 61.69
+        },
+        {
+          "name": "2020-06",
+          "value": 57.68
+        },
+        {
+          "name": "2020-07",
+          "value": 77.26
+        },
+        {
+          "name": "2020-08",
+          "value": 57.12
+        },
+        {
+          "name": "2020-09",
+          "value": 46.95
+        },
+        {
+          "name": "2020-10",
+          "value": 37.18
+        },
+        {
+          "name": "2020-11",
+          "value": 39.7
+        },
+        {
+          "name": "2020-12",
+          "value": 34.35
+        },
+        {
+          "name": "2021-01",
+          "value": 27.03
+        },
+        {
+          "name": "2021-02",
+          "value": 22.17
+        },
+        {
+          "name": "2021-03",
+          "value": 12.82
+        },
+        {
+          "name": "2021-04",
+          "value": 23.67
+        },
+        {
+          "name": "2021-05",
+          "value": 23.51
+        },
+        {
+          "name": "2021-06",
+          "value": 22.56
+        },
+        {
+          "name": "2021-07",
+          "value": 34.8
+        },
+        {
+          "name": "2021-08",
+          "value": 27.67
+        },
+        {
+          "name": "2021-09",
+          "value": 41.78
+        },
+        {
+          "name": "2021-10",
+          "value": 40.92
+        },
+        {
+          "name": "2021-11",
+          "value": 49.3
+        },
+        {
+          "name": "2021-12",
+          "value": 46.28
+        },
+        {
+          "name": "2022-01",
+          "value": 41.49
+        },
+        {
+          "name": "2022-02",
+          "value": 37.67
+        },
+        {
+          "name": "2022-03",
+          "value": 46.4
+        },
+        {
+          "name": "2022-04",
+          "value": 59.82
+        },
+        {
+          "name": "2022-05",
+          "value": 51.07
+        },
+        {
+          "name": "2022-06",
+          "value": 56.45
+        },
+        {
+          "name": "2022-07",
+          "value": 36.37
+        },
+        {
+          "name": "2022-08",
+          "value": 56.37
+        },
+        {
+          "name": "2022-09",
+          "value": 43.38
+        },
+        {
+          "name": "2022-10",
+          "value": 68.48
+        },
+        {
+          "name": "2022-11",
+          "value": 79.54
+        },
+        {
+          "name": "2022-12",
+          "value": 67.81
+        },
+        {
+          "name": "2023-01",
+          "value": 50.02
+        },
+        {
+          "name": "2023-02",
+          "value": 48.93
+        },
+        {
+          "name": "2023-03",
+          "value": 56.05
+        },
+        {
+          "name": "2023-04",
+          "value": 42.36
+        },
+        {
+          "name": "2023-05",
+          "value": 53.37
+        },
+        {
+          "name": "2023-06",
+          "value": 36.84
+        },
+        {
+          "name": "2023-07",
+          "value": 40.13
+        },
+        {
+          "name": "2023-08",
+          "value": 39.48
+        },
+        {
+          "name": "2023-09",
+          "value": 24.55
+        },
+        {
+          "name": "2023-10",
+          "value": 39.56
+        },
+        {
+          "name": "2023-11",
+          "value": 38.48
+        },
+        {
+          "name": "2023-12",
+          "value": 50.17
+        },
+        {
+          "name": "2024-01",
+          "value": 31.64
+        },
+        {
+          "name": "2024-02",
+          "value": 29.66
+        },
+        {
+          "name": "2024-03",
+          "value": 37.26
+        },
+        {
+          "name": "2024-04",
+          "value": 34.96
+        },
+        {
+          "name": "2024-05",
+          "value": 38.95
+        },
+        {
+          "name": "2024-06",
+          "value": 15.86
+        },
+        {
+          "name": "2024-07",
+          "value": 32.74
+        },
+        {
+          "name": "2024-08",
+          "value": 28.3
+        },
+        {
+          "name": "2024-09",
+          "value": 48.72
+        },
+        {
+          "name": "2024-10",
+          "value": 30.02
+        },
+        {
+          "name": "2024-11",
+          "value": 30.02
+        },
+        {
+          "name": "2024-12",
+          "value": 39.92
+        },
+        {
+          "name": "2025-01",
+          "value": 30.43
+        },
+        {
+          "name": "2025-02",
+          "value": 27.02
+        },
+        {
+          "name": "2025-03",
+          "value": 47.94
+        },
+        {
+          "name": "2025-04",
+          "value": 19.61
+        }
+      ],
+      "hour": [
+        {
+          "name": "00",
+          "value": 148.78
+        },
+        {
+          "name": "01",
+          "value": 115.41
+        },
+        {
+          "name": "02",
+          "value": 91.31
+        },
+        {
+          "name": "03",
+          "value": 92.31
+        },
+        {
+          "name": "04",
+          "value": 93.5
+        },
+        {
+          "name": "05",
+          "value": 193.77
+        },
+        {
+          "name": "06",
+          "value": 282.74
+        },
+        {
+          "name": "07",
+          "value": 237.62
+        },
+        {
+          "name": "08",
+          "value": 230.9
+        },
+        {
+          "name": "09",
+          "value": 276.7
+        },
+        {
+          "name": "10",
+          "value": 270.13
+        },
+        {
+          "name": "11",
+          "value": 259.48
+        },
+        {
+          "name": "12",
+          "value": 285.53
+        },
+        {
+          "name": "13",
+          "value": 274.01
+        },
+        {
+          "name": "14",
+          "value": 299.78
+        },
+        {
+          "name": "15",
+          "value": 372.55
+        },
+        {
+          "name": "16",
+          "value": 395.4
+        },
+        {
+          "name": "17",
+          "value": 335.06
+        },
+        {
+          "name": "18",
+          "value": 322.3
+        },
+        {
+          "name": "19",
+          "value": 292.81
+        },
+        {
+          "name": "20",
+          "value": 240.51
+        },
+        {
+          "name": "21",
+          "value": 209.75
+        },
+        {
+          "name": "22",
+          "value": 182.44
+        },
+        {
+          "name": "23",
+          "value": 153.49
+        }
+      ],
+      "weekday": [
+        {
+          "name": "Mo",
+          "value": 831.8
+        },
+        {
+          "name": "Di",
+          "value": 832.75
+        },
+        {
+          "name": "Mi",
+          "value": 796.82
+        },
+        {
+          "name": "Do",
+          "value": 791.03
+        },
+        {
+          "name": "Fr",
+          "value": 872.11
+        },
+        {
+          "name": "Sa",
+          "value": 827.87
+        },
+        {
+          "name": "So",
+          "value": 703.89
+        }
+      ],
+      "countries": [
+        {
+          "name": "DE",
+          "value": 174343
+        },
+        {
+          "name": "PT",
+          "value": 1199
+        },
+        {
+          "name": "VN",
+          "value": 814
+        },
+        {
+          "name": "NZ",
+          "value": 790
+        },
+        {
+          "name": "ZZ",
+          "value": 786
+        },
+        {
+          "name": "JP",
+          "value": 515
+        },
+        {
+          "name": "AT",
+          "value": 453
+        },
+        {
+          "name": "HR",
+          "value": 187
+        },
+        {
+          "name": "IT",
+          "value": 168
+        },
+        {
+          "name": "QA",
+          "value": 151
+        },
+        {
+          "name": "FR",
+          "value": 139
+        },
+        {
+          "name": "ES",
+          "value": 133
+        }
+      ],
+      "platforms": [
+        {
+          "name": "Android OS 7.0 API 24 (samsung, SM-G925F)",
+          "value": 71860
+        },
+        {
+          "name": "android",
+          "value": 36417
+        },
+        {
+          "name": "Android OS 12 API 31 (samsung, SM-G973F)",
+          "value": 18233
+        },
+        {
+          "name": "Android OS 11 API 30 (samsung, SM-G973F)",
+          "value": 15938
+        },
+        {
+          "name": "Android OS 10 API 29 (samsung, SM-G973F)",
+          "value": 11231
+        },
+        {
+          "name": "Android OS 6.0.1 API 23 (samsung, SM-G925F)",
+          "value": 9735
+        },
+        {
+          "name": "OS X 10.11.6 [x86 4]",
+          "value": 2024
+        },
+        {
+          "name": "Partner SCEI sony_tv;ps4;;",
+          "value": 1933
+        },
+        {
+          "name": "OS X 10.12.5 [x86 4]",
+          "value": 1861
+        },
+        {
+          "name": "OS X 10.12.1 [x86 4]",
+          "value": 1108
+        },
+        {
+          "name": "Android OS 5.0.2 API 21 (HTC, HTC One)",
+          "value": 1039
+        },
+        {
+          "name": "OS X 10.12.3 [x86 4]",
+          "value": 991
+        }
+      ]
     },
-    {
-      "name": "2017",
-      "hours": 1171.21
+    "topArtists": [
+      {
+        "name": "Jan Böhmermann",
+        "hours": 412.98,
+        "events": 802
+      },
+      {
+        "name": "Die drei ???",
+        "hours": 166.48,
+        "events": 6529
+      },
+      {
+        "name": "Dan Brown",
+        "hours": 67.9,
+        "events": 898
+      },
+      {
+        "name": "Andreas Eschbach",
+        "hours": 66.07,
+        "events": 1032
+      },
+      {
+        "name": "OG Keemo",
+        "hours": 64.26,
+        "events": 1584
+      },
+      {
+        "name": "Mac Miller",
+        "hours": 56.84,
+        "events": 1387
+      },
+      {
+        "name": "Argonautiks",
+        "hours": 43.28,
+        "events": 1175
+      },
+      {
+        "name": "Jazz Liberatorz",
+        "hours": 43.07,
+        "events": 879
+      },
+      {
+        "name": "RIN",
+        "hours": 36.63,
+        "events": 1148
+      },
+      {
+        "name": "Rokko Weissensee",
+        "hours": 36.19,
+        "events": 1316
+      },
+      {
+        "name": "RAPK",
+        "hours": 29.37,
+        "events": 1023
+      },
+      {
+        "name": "Trettmann",
+        "hours": 27.82,
+        "events": 807
+      },
+      {
+        "name": "Vince Staples",
+        "hours": 22.58,
+        "events": 688
+      },
+      {
+        "name": "Yung Hurn",
+        "hours": 21.66,
+        "events": 702
+      },
+      {
+        "name": "Heinz Strunk",
+        "hours": 18.89,
+        "events": 265
+      },
+      {
+        "name": "Joey Bada$$",
+        "hours": 18.63,
+        "events": 431
+      },
+      {
+        "name": "Gzuz",
+        "hours": 18.32,
+        "events": 738
+      },
+      {
+        "name": "Mobb Deep",
+        "hours": 16.88,
+        "events": 398
+      },
+      {
+        "name": "Lakmann",
+        "hours": 16.74,
+        "events": 542
+      },
+      {
+        "name": "Placebo",
+        "hours": 16.58,
+        "events": 806
+      },
+      {
+        "name": "The Notorious B.I.G.",
+        "hours": 16.32,
+        "events": 485
+      },
+      {
+        "name": "WDNG Crshrs",
+        "hours": 16.29,
+        "events": 373
+      },
+      {
+        "name": "KALIM",
+        "hours": 16.06,
+        "events": 390
+      },
+      {
+        "name": "Sebastian Fitzek",
+        "hours": 15.74,
+        "events": 251
+      },
+      {
+        "name": "Anti Lilly & Phoniks",
+        "hours": 15.71,
+        "events": 411
+      },
+      {
+        "name": "Naturgeräusche",
+        "hours": 15.68,
+        "events": 187
+      },
+      {
+        "name": "Travis Scott",
+        "hours": 15.28,
+        "events": 314
+      },
+      {
+        "name": "Max Cooper",
+        "hours": 15.23,
+        "events": 298
+      },
+      {
+        "name": "Haze",
+        "hours": 15.04,
+        "events": 411
+      },
+      {
+        "name": "Kwam.E",
+        "hours": 14.98,
+        "events": 308
+      },
+      {
+        "name": "dude26",
+        "hours": 14.67,
+        "events": 294
+      },
+      {
+        "name": "Hanybal",
+        "hours": 13.99,
+        "events": 507
+      },
+      {
+        "name": "The Pharcyde",
+        "hours": 13.55,
+        "events": 404
+      },
+      {
+        "name": "Chuuwee",
+        "hours": 13.4,
+        "events": 538
+      },
+      {
+        "name": "Drake",
+        "hours": 13.25,
+        "events": 413
+      },
+      {
+        "name": "EARTHGANG",
+        "hours": 13.12,
+        "events": 305
+      },
+      {
+        "name": "ScHoolboy Q",
+        "hours": 13.08,
+        "events": 394
+      },
+      {
+        "name": "A.I.D.S.",
+        "hours": 12.53,
+        "events": 278
+      },
+      {
+        "name": "Sido",
+        "hours": 12.35,
+        "events": 513
+      },
+      {
+        "name": "Loyle Carner",
+        "hours": 12.21,
+        "events": 446
+      },
+      {
+        "name": "elo",
+        "hours": 12.15,
+        "events": 594
+      },
+      {
+        "name": "FloFilz",
+        "hours": 11.96,
+        "events": 409
+      },
+      {
+        "name": "SHOULDA",
+        "hours": 11.75,
+        "events": 298
+      },
+      {
+        "name": "Prezident",
+        "hours": 11.64,
+        "events": 306
+      },
+      {
+        "name": "A$AP Rocky",
+        "hours": 11.47,
+        "events": 355
+      },
+      {
+        "name": "Mista Meta",
+        "hours": 11.41,
+        "events": 285
+      },
+      {
+        "name": "Snoop Dogg",
+        "hours": 11.32,
+        "events": 420
+      },
+      {
+        "name": "Awon",
+        "hours": 11.31,
+        "events": 515
+      },
+      {
+        "name": "morten",
+        "hours": 11.26,
+        "events": 200
+      },
+      {
+        "name": "Cypress Hill",
+        "hours": 11.2,
+        "events": 359
+      }
+    ],
+    "topTracks": [
+      {
+        "name": "Episode 22: The Show Must Go On — Jan Böhmermann",
+        "hours": 16.88,
+        "events": 32
+      },
+      {
+        "name": "Episode 45: Quote Quote Quote - das Leben ist gar nicht mal so schlecht — Jan Böhmermann",
+        "hours": 16.32,
+        "events": 17
+      },
+      {
+        "name": "Gewitter Geräusche — Naturgeräusche",
+        "hours": 15.39,
+        "events": 176
+      },
+      {
+        "name": "PEN — OG Keemo",
+        "hours": 15.08,
+        "events": 242
+      },
+      {
+        "name": "Episode 48: Clickbait — Jan Böhmermann",
+        "hours": 12.73,
+        "events": 15
+      },
+      {
+        "name": "Episode 44: Der große Narzissmus-Test — Jan Böhmermann",
+        "hours": 12.19,
+        "events": 17
+      },
+      {
+        "name": "25/8 — OG Keemo",
+        "hours": 11.94,
+        "events": 197
+      },
+      {
+        "name": "Episode 51: Willkommen Auf Schloss Olli — Jan Böhmermann",
+        "hours": 11.89,
+        "events": 24
+      },
+      {
+        "name": "Episode 49: Umgezogene Jungs — Jan Böhmermann",
+        "hours": 11.78,
+        "events": 14
+      },
+      {
+        "name": "I Am Hip Hop - Feat. Asheru — Jazz Liberatorz",
+        "hours": 11.66,
+        "events": 212
+      },
+      {
+        "name": "Wieso?! — Kwam.E",
+        "hours": 11.58,
+        "events": 184
+      },
+      {
+        "name": "Neptun — OG Keemo",
+        "hours": 11.25,
+        "events": 293
+      },
+      {
+        "name": "Unter Schüben — dude26",
+        "hours": 11.2,
+        "events": 173
+      },
+      {
+        "name": "spacejoints.flp — morten",
+        "hours": 11.19,
+        "events": 196
+      },
+      {
+        "name": "Episode 26: Runterfahren — Jan Böhmermann",
+        "hours": 11.03,
+        "events": 8
+      },
+      {
+        "name": "Episode 42: Tabletten gegen alles — Jan Böhmermann",
+        "hours": 10.8,
+        "events": 10
+      },
+      {
+        "name": "TOY — Argonautiks",
+        "hours": 10.74,
+        "events": 201
+      },
+      {
+        "name": "Episode 46: Melancholie — Jan Böhmermann",
+        "hours": 10.65,
+        "events": 29
+      },
+      {
+        "name": "Episode 40: Gemischte Gefühle — Jan Böhmermann",
+        "hours": 10.63,
+        "events": 19
+      },
+      {
+        "name": "Combination — WDNG Crshrs",
+        "hours": 10.48,
+        "events": 193
+      },
+      {
+        "name": "Episode 21: Das Leben ist ne Ratte — Jan Böhmermann",
+        "hours": 10.43,
+        "events": 11
+      },
+      {
+        "name": "Episode 27: Die Baustelle des Lebens — Jan Böhmermann",
+        "hours": 10.04,
+        "events": 11
+      },
+      {
+        "name": "Episode 43: Kurz vor dem Absprung — Jan Böhmermann",
+        "hours": 9.98,
+        "events": 18
+      },
+      {
+        "name": "goosebumps — Travis Scott",
+        "hours": 9.97,
+        "events": 193
+      },
+      {
+        "name": "Episode 50: Spitten und Biten (mit Ali As) — Jan Böhmermann",
+        "hours": 9.97,
+        "events": 12
+      },
+      {
+        "name": "Episode 24: Liebeskummersendung — Jan Böhmermann",
+        "hours": 9.92,
+        "events": 13
+      },
+      {
+        "name": "Blackout — RIN",
+        "hours": 9.84,
+        "events": 252
+      },
+      {
+        "name": "Episode 25: Altern und Würde — Jan Böhmermann",
+        "hours": 9.39,
+        "events": 8
+      },
+      {
+        "name": "Atmosphäre — John Known",
+        "hours": 9.36,
+        "events": 181
+      },
+      {
+        "name": "Episode 47: Morgenstund hat Jan und Olli im Mund — Jan Böhmermann",
+        "hours": 9.31,
+        "events": 12
+      },
+      {
+        "name": "Episode 19: Global Warning — Jan Böhmermann",
+        "hours": 9.27,
+        "events": 8
+      },
+      {
+        "name": "Knöcheltief — Trettmann",
+        "hours": 9.26,
+        "events": 175
+      },
+      {
+        "name": "Terror — Masta Ace Incorporated",
+        "hours": 9.25,
+        "events": 125
+      },
+      {
+        "name": "Episode 38: Karriereknick — Jan Böhmermann",
+        "hours": 9.22,
+        "events": 6
+      },
+      {
+        "name": "Toystory — Mista Meta",
+        "hours": 9.17,
+        "events": 173
+      },
+      {
+        "name": "All Good — Illa J",
+        "hours": 9.16,
+        "events": 231
+      },
+      {
+        "name": "My Boo - Hitman's Club Mix — Ghost Town DJs",
+        "hours": 9.15,
+        "events": 186
+      },
+      {
+        "name": "Buttons — Mac Miller",
+        "hours": 9.07,
+        "events": 148
+      },
+      {
+        "name": "Descension — Anti Lilly & Phoniks",
+        "hours": 8.89,
+        "events": 192
+      },
+      {
+        "name": "Träumer — Aaron Grav",
+        "hours": 8.76,
+        "events": 135
+      },
+      {
+        "name": "Vorwort — OG Keemo",
+        "hours": 8.61,
+        "events": 150
+      },
+      {
+        "name": "La La La — The Doppelgangaz",
+        "hours": 8.53,
+        "events": 210
+      },
+      {
+        "name": "Episode 29: 1000 ganz legale Steuertricks (gib dem Hass eine Chance) — Jan Böhmermann",
+        "hours": 8.46,
+        "events": 10
+      },
+      {
+        "name": "Schwebe — Füffi",
+        "hours": 8.4,
+        "events": 160
+      },
+      {
+        "name": "Vacation - Feat. J. Live — Jazz Liberatorz",
+        "hours": 8.29,
+        "events": 162
+      },
+      {
+        "name": "Missed Calls — EARTHGANG",
+        "hours": 8.04,
+        "events": 119
+      },
+      {
+        "name": "Selbst ist der Dude 2 — Laskah",
+        "hours": 7.99,
+        "events": 145
+      },
+      {
+        "name": "Hellwach — Yung Hurn",
+        "hours": 7.97,
+        "events": 174
+      },
+      {
+        "name": "Episode 7: Paradiesische Verhältnisse — Jan Böhmermann",
+        "hours": 7.96,
+        "events": 7
+      },
+      {
+        "name": "Episode 37: Honig im Tee — Jan Böhmermann",
+        "hours": 7.95,
+        "events": 12
+      },
+      {
+        "name": "Dream Machine - Downtempo Mix — Mark Farina",
+        "hours": 7.94,
+        "events": 153
+      },
+      {
+        "name": "Episode 20: Marzipankartoffeln — Jan Böhmermann",
+        "hours": 7.9,
+        "events": 10
+      },
+      {
+        "name": "Qualia — Max Cooper",
+        "hours": 7.88,
+        "events": 155
+      },
+      {
+        "name": "Berlin 99 — Argonautiks",
+        "hours": 7.62,
+        "events": 217
+      },
+      {
+        "name": "Bass — RIN",
+        "hours": 7.59,
+        "events": 178
+      },
+      {
+        "name": "Episode 14: Barbarische Wochen — Jan Böhmermann",
+        "hours": 7.55,
+        "events": 9
+      },
+      {
+        "name": "Fabrics — Felly",
+        "hours": 7.55,
+        "events": 171
+      },
+      {
+        "name": "Hurt Feelings — Mac Miller",
+        "hours": 7.49,
+        "events": 154
+      },
+      {
+        "name": "Episode 16: Die blaue Stunde — Jan Böhmermann",
+        "hours": 7.48,
+        "events": 7
+      },
+      {
+        "name": "ON Y VA — B. Bilbo",
+        "hours": 7.46,
+        "events": 114
+      },
+      {
+        "name": "CrasH — ScHoolboy Q",
+        "hours": 7.42,
+        "events": 182
+      },
+      {
+        "name": "VVV — KALIM",
+        "hours": 7.42,
+        "events": 189
+      },
+      {
+        "name": "Bitch! — Ugly God",
+        "hours": 7.41,
+        "events": 211
+      },
+      {
+        "name": "My Jeep (feat. Flatbush Zombies & The Underachievers) (feat. Meechie Darko, Issa Gold & Chuck Strangers) — Joey Bada$$",
+        "hours": 7.34,
+        "events": 120
+      },
+      {
+        "name": "Roach Fingers — Jesse Bru",
+        "hours": 7.34,
+        "events": 93
+      },
+      {
+        "name": "Episode 13: Autorität — Jan Böhmermann",
+        "hours": 7.33,
+        "events": 7
+      },
+      {
+        "name": "Gewinn — Ufo361",
+        "hours": 7.26,
+        "events": 164
+      },
+      {
+        "name": "C'est tout — DJ Balaton",
+        "hours": 7.24,
+        "events": 85
+      },
+      {
+        "name": "When The Clock Ticks - Feat. J. Sands — Jazz Liberatorz",
+        "hours": 7.23,
+        "events": 128
+      },
+      {
+        "name": "Catch My Drift — LeRoyce",
+        "hours": 7.19,
+        "events": 134
+      },
+      {
+        "name": "Episode 52: Das große Finale (vor der Sommerpause) — Jan Böhmermann",
+        "hours": 7.1,
+        "events": 6
+      },
+      {
+        "name": "Blue — Frizzy P & Mr Cole",
+        "hours": 7.01,
+        "events": 175
+      },
+      {
+        "name": "I bin heit net do — Jamin",
+        "hours": 6.93,
+        "events": 190
+      },
+      {
+        "name": "Accordion — Madvillain",
+        "hours": 6.92,
+        "events": 208
+      },
+      {
+        "name": "Odyssey (feat. Elz) — Coops",
+        "hours": 6.9,
+        "events": 154
+      },
+      {
+        "name": "Trillmatic (feat. A$AP Nast & Method Man) — A$AP Mob",
+        "hours": 6.9,
+        "events": 168
+      },
+      {
+        "name": "38 — KALIM",
+        "hours": 6.88,
+        "events": 145
+      },
+      {
+        "name": "Choices — Se’A",
+        "hours": 6.83,
+        "events": 173
+      },
+      {
+        "name": "Becher & Blunt — Haze",
+        "hours": 6.8,
+        "events": 132
+      },
+      {
+        "name": "Episode 36: Ordnung ist das halbe Leben — Jan Böhmermann",
+        "hours": 6.76,
+        "events": 10
+      }
+    ]
+  },
+  "podcasts": {
+    "kpis": {
+      "events": 7365,
+      "hours": 2373.22
     },
-    {
-      "name": "2018",
-      "hours": 1109.36
+    "time": {
+      "year": [
+        {
+          "name": "2017",
+          "value": 143.36
+        },
+        {
+          "name": "2018",
+          "value": 342.43
+        },
+        {
+          "name": "2019",
+          "value": 377.98
+        },
+        {
+          "name": "2020",
+          "value": 305.17
+        },
+        {
+          "name": "2021",
+          "value": 256.76
+        },
+        {
+          "name": "2022",
+          "value": 355.27
+        },
+        {
+          "name": "2023",
+          "value": 310.49
+        },
+        {
+          "name": "2024",
+          "value": 221.02
+        },
+        {
+          "name": "2025",
+          "value": 60.75
+        }
+      ],
+      "month": [
+        {
+          "name": "2017-03",
+          "value": 0.39
+        },
+        {
+          "name": "2017-04",
+          "value": 2.84
+        },
+        {
+          "name": "2017-08",
+          "value": 15.25
+        },
+        {
+          "name": "2017-09",
+          "value": 47.24
+        },
+        {
+          "name": "2017-10",
+          "value": 25.96
+        },
+        {
+          "name": "2017-11",
+          "value": 24.54
+        },
+        {
+          "name": "2017-12",
+          "value": 27.14
+        },
+        {
+          "name": "2018-01",
+          "value": 18.43
+        },
+        {
+          "name": "2018-02",
+          "value": 34.78
+        },
+        {
+          "name": "2018-03",
+          "value": 19.23
+        },
+        {
+          "name": "2018-04",
+          "value": 29.55
+        },
+        {
+          "name": "2018-05",
+          "value": 41.47
+        },
+        {
+          "name": "2018-06",
+          "value": 52.55
+        },
+        {
+          "name": "2018-07",
+          "value": 12.94
+        },
+        {
+          "name": "2018-08",
+          "value": 13.06
+        },
+        {
+          "name": "2018-09",
+          "value": 21.25
+        },
+        {
+          "name": "2018-10",
+          "value": 28.92
+        },
+        {
+          "name": "2018-11",
+          "value": 29.29
+        },
+        {
+          "name": "2018-12",
+          "value": 40.95
+        },
+        {
+          "name": "2019-01",
+          "value": 18.5
+        },
+        {
+          "name": "2019-02",
+          "value": 34.38
+        },
+        {
+          "name": "2019-03",
+          "value": 27.01
+        },
+        {
+          "name": "2019-04",
+          "value": 20.62
+        },
+        {
+          "name": "2019-05",
+          "value": 26.94
+        },
+        {
+          "name": "2019-06",
+          "value": 45.82
+        },
+        {
+          "name": "2019-07",
+          "value": 51.25
+        },
+        {
+          "name": "2019-08",
+          "value": 29.52
+        },
+        {
+          "name": "2019-09",
+          "value": 32.85
+        },
+        {
+          "name": "2019-10",
+          "value": 28.96
+        },
+        {
+          "name": "2019-11",
+          "value": 25.36
+        },
+        {
+          "name": "2019-12",
+          "value": 36.77
+        },
+        {
+          "name": "2020-01",
+          "value": 54.79
+        },
+        {
+          "name": "2020-02",
+          "value": 13.54
+        },
+        {
+          "name": "2020-03",
+          "value": 30.74
+        },
+        {
+          "name": "2020-04",
+          "value": 55.81
+        },
+        {
+          "name": "2020-05",
+          "value": 37.2
+        },
+        {
+          "name": "2020-06",
+          "value": 30.02
+        },
+        {
+          "name": "2020-07",
+          "value": 18.04
+        },
+        {
+          "name": "2020-08",
+          "value": 10.63
+        },
+        {
+          "name": "2020-09",
+          "value": 6.66
+        },
+        {
+          "name": "2020-10",
+          "value": 21.24
+        },
+        {
+          "name": "2020-11",
+          "value": 16.38
+        },
+        {
+          "name": "2020-12",
+          "value": 10.12
+        },
+        {
+          "name": "2021-01",
+          "value": 13.98
+        },
+        {
+          "name": "2021-02",
+          "value": 16.8
+        },
+        {
+          "name": "2021-03",
+          "value": 18.12
+        },
+        {
+          "name": "2021-04",
+          "value": 24.64
+        },
+        {
+          "name": "2021-05",
+          "value": 23.2
+        },
+        {
+          "name": "2021-06",
+          "value": 19.31
+        },
+        {
+          "name": "2021-07",
+          "value": 8.81
+        },
+        {
+          "name": "2021-08",
+          "value": 0.75
+        },
+        {
+          "name": "2021-09",
+          "value": 25.32
+        },
+        {
+          "name": "2021-10",
+          "value": 29.76
+        },
+        {
+          "name": "2021-11",
+          "value": 32.05
+        },
+        {
+          "name": "2021-12",
+          "value": 44.03
+        },
+        {
+          "name": "2022-01",
+          "value": 43.61
+        },
+        {
+          "name": "2022-02",
+          "value": 40.87
+        },
+        {
+          "name": "2022-03",
+          "value": 32.21
+        },
+        {
+          "name": "2022-04",
+          "value": 35.62
+        },
+        {
+          "name": "2022-05",
+          "value": 33.8
+        },
+        {
+          "name": "2022-06",
+          "value": 27.99
+        },
+        {
+          "name": "2022-07",
+          "value": 20.38
+        },
+        {
+          "name": "2022-08",
+          "value": 14.86
+        },
+        {
+          "name": "2022-09",
+          "value": 24.5
+        },
+        {
+          "name": "2022-10",
+          "value": 38.59
+        },
+        {
+          "name": "2022-11",
+          "value": 19.08
+        },
+        {
+          "name": "2022-12",
+          "value": 23.75
+        },
+        {
+          "name": "2023-01",
+          "value": 34.32
+        },
+        {
+          "name": "2023-02",
+          "value": 38.44
+        },
+        {
+          "name": "2023-03",
+          "value": 22.11
+        },
+        {
+          "name": "2023-04",
+          "value": 35.32
+        },
+        {
+          "name": "2023-05",
+          "value": 23.43
+        },
+        {
+          "name": "2023-06",
+          "value": 29.86
+        },
+        {
+          "name": "2023-07",
+          "value": 25.01
+        },
+        {
+          "name": "2023-08",
+          "value": 14.44
+        },
+        {
+          "name": "2023-09",
+          "value": 29.87
+        },
+        {
+          "name": "2023-10",
+          "value": 21.91
+        },
+        {
+          "name": "2023-11",
+          "value": 19.35
+        },
+        {
+          "name": "2023-12",
+          "value": 16.44
+        },
+        {
+          "name": "2024-01",
+          "value": 17.46
+        },
+        {
+          "name": "2024-02",
+          "value": 20.12
+        },
+        {
+          "name": "2024-03",
+          "value": 22.15
+        },
+        {
+          "name": "2024-04",
+          "value": 17.85
+        },
+        {
+          "name": "2024-05",
+          "value": 13.57
+        },
+        {
+          "name": "2024-06",
+          "value": 19.6
+        },
+        {
+          "name": "2024-07",
+          "value": 29.07
+        },
+        {
+          "name": "2024-08",
+          "value": 20.02
+        },
+        {
+          "name": "2024-09",
+          "value": 12.06
+        },
+        {
+          "name": "2024-10",
+          "value": 15.93
+        },
+        {
+          "name": "2024-11",
+          "value": 20.84
+        },
+        {
+          "name": "2024-12",
+          "value": 12.34
+        },
+        {
+          "name": "2025-01",
+          "value": 13.03
+        },
+        {
+          "name": "2025-02",
+          "value": 20.93
+        },
+        {
+          "name": "2025-03",
+          "value": 18.28
+        },
+        {
+          "name": "2025-04",
+          "value": 8.51
+        }
+      ],
+      "hour": [
+        {
+          "name": "00",
+          "value": 143.42
+        },
+        {
+          "name": "01",
+          "value": 112.35
+        },
+        {
+          "name": "02",
+          "value": 75.26
+        },
+        {
+          "name": "03",
+          "value": 55.72
+        },
+        {
+          "name": "04",
+          "value": 74.33
+        },
+        {
+          "name": "05",
+          "value": 108.33
+        },
+        {
+          "name": "06",
+          "value": 107.6
+        },
+        {
+          "name": "07",
+          "value": 131.09
+        },
+        {
+          "name": "08",
+          "value": 150.19
+        },
+        {
+          "name": "09",
+          "value": 136.69
+        },
+        {
+          "name": "10",
+          "value": 134.22
+        },
+        {
+          "name": "11",
+          "value": 101.53
+        },
+        {
+          "name": "12",
+          "value": 107.11
+        },
+        {
+          "name": "13",
+          "value": 86.1
+        },
+        {
+          "name": "14",
+          "value": 86.7
+        },
+        {
+          "name": "15",
+          "value": 87.35
+        },
+        {
+          "name": "16",
+          "value": 68.98
+        },
+        {
+          "name": "17",
+          "value": 81.49
+        },
+        {
+          "name": "18",
+          "value": 75.18
+        },
+        {
+          "name": "19",
+          "value": 49.15
+        },
+        {
+          "name": "20",
+          "value": 53.25
+        },
+        {
+          "name": "21",
+          "value": 75.5
+        },
+        {
+          "name": "22",
+          "value": 116.57
+        },
+        {
+          "name": "23",
+          "value": 155.11
+        }
+      ],
+      "weekday": [
+        {
+          "name": "Mo",
+          "value": 415.62
+        },
+        {
+          "name": "Di",
+          "value": 329.23
+        },
+        {
+          "name": "Mi",
+          "value": 343.91
+        },
+        {
+          "name": "Do",
+          "value": 278.33
+        },
+        {
+          "name": "Fr",
+          "value": 284.96
+        },
+        {
+          "name": "Sa",
+          "value": 252.17
+        },
+        {
+          "name": "So",
+          "value": 469.0
+        }
+      ],
+      "countries": [
+        {
+          "name": "DE",
+          "value": 7142
+        },
+        {
+          "name": "VN",
+          "value": 46
+        },
+        {
+          "name": "ZZ",
+          "value": 32
+        },
+        {
+          "name": "NZ",
+          "value": 25
+        },
+        {
+          "name": "ES",
+          "value": 21
+        },
+        {
+          "name": "PT",
+          "value": 18
+        },
+        {
+          "name": "JP",
+          "value": 17
+        },
+        {
+          "name": "FR",
+          "value": 15
+        },
+        {
+          "name": "QA",
+          "value": 14
+        },
+        {
+          "name": "IT",
+          "value": 11
+        },
+        {
+          "name": "HR",
+          "value": 10
+        },
+        {
+          "name": "GR",
+          "value": 7
+        }
+      ],
+      "platforms": [
+        {
+          "name": "android",
+          "value": 2721
+        },
+        {
+          "name": "Android OS 7.0 API 24 (samsung, SM-G925F)",
+          "value": 1766
+        },
+        {
+          "name": "Android OS 11 API 30 (samsung, SM-G973F)",
+          "value": 950
+        },
+        {
+          "name": "Android OS 12 API 31 (samsung, SM-G973F)",
+          "value": 856
+        },
+        {
+          "name": "Android OS 10 API 29 (samsung, SM-G973F)",
+          "value": 313
+        },
+        {
+          "name": "OS X 10.12.6 [x86 4]",
+          "value": 149
+        },
+        {
+          "name": "OS X 10.14.5 [x86 4]",
+          "value": 94
+        },
+        {
+          "name": "OS X 10.13.4 [x86 4]",
+          "value": 71
+        },
+        {
+          "name": "OS X 10.13.2 [x86 4]",
+          "value": 63
+        },
+        {
+          "name": "OS X 10.14.3 [x86 4]",
+          "value": 63
+        },
+        {
+          "name": "Partner SCEI sony_tv;ps4;;",
+          "value": 49
+        },
+        {
+          "name": "Android OS 6.0.1 API 23 (samsung, SM-G925F)",
+          "value": 44
+        }
+      ]
     },
-    {
-      "name": "2019",
-      "hours": 1044.96
-    },
-    {
-      "name": "2020",
-      "hours": 943.33
-    },
-    {
-      "name": "2021",
-      "hours": 629.25
-    },
-    {
-      "name": "2022",
-      "hours": 1000.11
-    },
-    {
-      "name": "2023",
-      "hours": 830.44
-    },
-    {
-      "name": "2024",
-      "hours": 619.04
-    },
-    {
-      "name": "2025",
-      "hours": 185.75
+    "topShows": [
+      {
+        "name": "Fest & Flauschig",
+        "hours": 991.5,
+        "events": 2743
+      },
+      {
+        "name": "LANZ & PRECHT",
+        "hours": 215.25,
+        "events": 734
+      },
+      {
+        "name": "Gemischtes Hack",
+        "hours": 189.03,
+        "events": 524
+      },
+      {
+        "name": "Verbrechen",
+        "hours": 131.52,
+        "events": 384
+      },
+      {
+        "name": "radioWissen",
+        "hours": 114.05,
+        "events": 616
+      },
+      {
+        "name": "HörGestalten",
+        "hours": 83.39,
+        "events": 131
+      },
+      {
+        "name": "DAS PODCAST UFO",
+        "hours": 60.57,
+        "events": 112
+      },
+      {
+        "name": "TALK-O-MAT",
+        "hours": 60.4,
+        "events": 127
+      },
+      {
+        "name": "Philosophize This!",
+        "hours": 48.48,
+        "events": 153
+      },
+      {
+        "name": "Baywatch Berlin",
+        "hours": 47.09,
+        "events": 155
+      },
+      {
+        "name": "Kack & Sachgeschichten",
+        "hours": 42.22,
+        "events": 39
+      },
+      {
+        "name": "Macht und Millionen – Der Podcast über echte Wirtschaftskrimis",
+        "hours": 30.49,
+        "events": 125
+      },
+      {
+        "name": "ZEIT WISSEN. Woher weißt Du das?",
+        "hours": 25.94,
+        "events": 108
+      },
+      {
+        "name": "Geschichten aus der Geschichte",
+        "hours": 20.45,
+        "events": 62
+      },
+      {
+        "name": "Beste Freundinnen",
+        "hours": 16.79,
+        "events": 54
+      },
+      {
+        "name": "Rätsel des Unbewußten. Psychoanalyse & Psychotherapie.",
+        "hours": 14.44,
+        "events": 70
+      },
+      {
+        "name": "Podkinski - Der Podcast mit Palina Rojinski",
+        "hours": 14.18,
+        "events": 26
+      },
+      {
+        "name": "Reply All",
+        "hours": 13.16,
+        "events": 51
+      },
+      {
+        "name": "ramble!",
+        "hours": 12.04,
+        "events": 16
+      },
+      {
+        "name": "Chatgeflüster",
+        "hours": 12.03,
+        "events": 35
+      },
+      {
+        "name": "Bankless",
+        "hours": 11.76,
+        "events": 27
+      },
+      {
+        "name": "Das Wissen | SWR",
+        "hours": 11.13,
+        "events": 51
+      },
+      {
+        "name": "11KM: der tagesschau-Podcast",
+        "hours": 11.04,
+        "events": 53
+      },
+      {
+        "name": "Kalk & Welk - Die fabelhaften Boomer Boys",
+        "hours": 10.19,
+        "events": 39
+      },
+      {
+        "name": "The Blockcrunch Podcast",
+        "hours": 10.1,
+        "events": 48
+      },
+      {
+        "name": "Oops",
+        "hours": 9.57,
+        "events": 36
+      },
+      {
+        "name": "Einschlafen mit Tolkien",
+        "hours": 9.46,
+        "events": 88
+      },
+      {
+        "name": "The Documentary Podcast",
+        "hours": 8.54,
+        "events": 42
+      },
+      {
+        "name": "Saunaclub Susanne",
+        "hours": 8.31,
+        "events": 13
+      },
+      {
+        "name": "Einschlafen Podcast",
+        "hours": 7.68,
+        "events": 11
+      },
+      {
+        "name": "Heinz Strunks Familienaufstellung",
+        "hours": 7.27,
+        "events": 45
+      },
+      {
+        "name": "SmartLess",
+        "hours": 5.7,
+        "events": 12
+      },
+      {
+        "name": "Boys Club – Macht & Missbrauch bei Axel Springer",
+        "hours": 5.69,
+        "events": 20
+      },
+      {
+        "name": "Schneller schlau - Der kurze Wissenspodcast von P.M.",
+        "hours": 5.55,
+        "events": 39
+      },
+      {
+        "name": "Was tun, Herr General? - Der Podcast zum Ukraine-Krieg",
+        "hours": 5.04,
+        "events": 14
+      },
+      {
+        "name": "So bin ich eben! Stefanie Stahls Psychologie-Podcast für alle \"Normalgestörten\"",
+        "hours": 4.85,
+        "events": 20
+      },
+      {
+        "name": "Clarify - große Themen, klare Worte",
+        "hours": 4.46,
+        "events": 13
+      },
+      {
+        "name": "Global News Podcast",
+        "hours": 4.46,
+        "events": 23
+      },
+      {
+        "name": "5 Minuten Harry Podcast von Coldmirror",
+        "hours": 4.4,
+        "events": 18
+      },
+      {
+        "name": "JOKES mit Till Reiners",
+        "hours": 4.05,
+        "events": 15
+      },
+      {
+        "name": "Das Lederhosen Kartell",
+        "hours": 3.88,
+        "events": 22
+      },
+      {
+        "name": "TED Talks Daily",
+        "hours": 3.61,
+        "events": 23
+      },
+      {
+        "name": "Amerika, wir müssen reden!",
+        "hours": 3.5,
+        "events": 13
+      },
+      {
+        "name": "Acquired",
+        "hours": 3.23,
+        "events": 11
+      },
+      {
+        "name": "Cryptocurrency for Beginners: with Crypto Casey",
+        "hours": 3.22,
+        "events": 20
+      },
+      {
+        "name": "Desert Island Discs: Archive 2011-2015",
+        "hours": 3.0,
+        "events": 13
+      },
+      {
+        "name": "Einhundert - Deutschlandfunk Nova",
+        "hours": 2.72,
+        "events": 9
+      },
+      {
+        "name": "Die Reportage von MDR AKTUELL",
+        "hours": 2.51,
+        "events": 17
+      },
+      {
+        "name": "Learn English Through Listening",
+        "hours": 2.37,
+        "events": 20
+      },
+      {
+        "name": "Kaulitz Hills - Senf aus Hollywood ",
+        "hours": 2.31,
+        "events": 6
+      }
+    ],
+    "topEpisodes": [
+      {
+        "name": "Ulrike hat keinen Bock",
+        "hours": 12.28,
+        "events": 23
+      },
+      {
+        "name": "Lass die Knoten platzen",
+        "hours": 11.47,
+        "events": 14
+      },
+      {
+        "name": "Provinzielle Verhältnisse",
+        "hours": 10.86,
+        "events": 17
+      },
+      {
+        "name": "DARÜBER müsst Ihr mal was machen!",
+        "hours": 10.57,
+        "events": 18
+      },
+      {
+        "name": "Wenn Ihrs dirty wollt",
+        "hours": 10.0,
+        "events": 16
+      },
+      {
+        "name": "Ich lauf doch schon so schnell ich kann.",
+        "hours": 9.43,
+        "events": 22
+      },
+      {
+        "name": "What? What? Ursula? What? Squirt!",
+        "hours": 9.03,
+        "events": 15
+      },
+      {
+        "name": "Morphium fürs Volk",
+        "hours": 8.45,
+        "events": 22
+      },
+      {
+        "name": "\"Firm & Fluffy\" L.A. Style",
+        "hours": 8.13,
+        "events": 15
+      },
+      {
+        "name": "Im Kerker des Kalifen",
+        "hours": 7.32,
+        "events": 11
+      },
+      {
+        "name": "Wir hassen Internet",
+        "hours": 7.15,
+        "events": 21
+      },
+      {
+        "name": "030959997666",
+        "hours": 7.14,
+        "events": 12
+      },
+      {
+        "name": "Schöner Penis Deutschland",
+        "hours": 7.1,
+        "events": 11
+      },
+      {
+        "name": "Mittelmäßigkeit",
+        "hours": 6.99,
+        "events": 12
+      },
+      {
+        "name": "Sommerfun mit Olli und Jan",
+        "hours": 6.98,
+        "events": 7
+      },
+      {
+        "name": "#121: Forrest Forrest Gump",
+        "hours": 6.93,
+        "events": 3
+      },
+      {
+        "name": "Eine Sendung wie ein Autounfall",
+        "hours": 6.87,
+        "events": 14
+      },
+      {
+        "name": "Whiskey und Chips",
+        "hours": 6.69,
+        "events": 7
+      },
+      {
+        "name": "The future is now",
+        "hours": 6.53,
+        "events": 15
+      },
+      {
+        "name": "Die ersten Mandarinen",
+        "hours": 6.53,
+        "events": 7
+      },
+      {
+        "name": "Operetten-Bär, Makkaroni-Bär und Amtsman",
+        "hours": 6.48,
+        "events": 13
+      },
+      {
+        "name": "About You",
+        "hours": 6.41,
+        "events": 7
+      },
+      {
+        "name": "Solange so lala",
+        "hours": 6.27,
+        "events": 7
+      },
+      {
+        "name": "Jörn & Olaf",
+        "hours": 6.23,
+        "events": 9
+      },
+      {
+        "name": "Liebe auf sehr lange Distanz",
+        "hours": 6.14,
+        "events": 9
+      },
+      {
+        "name": "Nix geschafft und schon 3. Juni",
+        "hours": 6.1,
+        "events": 12
+      },
+      {
+        "name": "Crunchy",
+        "hours": 6.04,
+        "events": 12
+      },
+      {
+        "name": "Niedlich, niedlich",
+        "hours": 5.96,
+        "events": 12
+      },
+      {
+        "name": "Geldscheingesichter",
+        "hours": 5.85,
+        "events": 13
+      },
+      {
+        "name": "Wir haben den Galgen geprüft",
+        "hours": 5.79,
+        "events": 12
+      },
+      {
+        "name": "Düsteres Erbe",
+        "hours": 5.75,
+        "events": 8
+      },
+      {
+        "name": "Schulz vs. Böhmermann",
+        "hours": 5.72,
+        "events": 9
+      },
+      {
+        "name": "Das große Finale (vor der Sommerpause)",
+        "hours": 5.71,
+        "events": 5
+      },
+      {
+        "name": "Tiddenundschüps",
+        "hours": 5.54,
+        "events": 11
+      },
+      {
+        "name": "Leichte Kost",
+        "hours": 5.43,
+        "events": 15
+      },
+      {
+        "name": "Schweineschwarten im Supermarkt",
+        "hours": 5.37,
+        "events": 13
+      },
+      {
+        "name": "Dornige Probleme",
+        "hours": 5.22,
+        "events": 5
+      },
+      {
+        "name": "Die leichte Sendung",
+        "hours": 5.17,
+        "events": 14
+      },
+      {
+        "name": "Kotze in der Kuschelecke",
+        "hours": 5.16,
+        "events": 9
+      },
+      {
+        "name": "Sanft & Sorgfältig",
+        "hours": 5.14,
+        "events": 9
+      },
+      {
+        "name": "#4: Felix Brummer x Kat Kaufmann",
+        "hours": 5.1,
+        "events": 9
+      },
+      {
+        "name": "Tommi Schmitt - Gut oder Böse reloaded",
+        "hours": 5.07,
+        "events": 6
+      },
+      {
+        "name": "HG | 017 - Luise Lunow",
+        "hours": 5.01,
+        "events": 6
+      },
+      {
+        "name": "Leben und Wohnen",
+        "hours": 4.76,
+        "events": 6
+      },
+      {
+        "name": "Das Jahr des Menschen",
+        "hours": 4.73,
+        "events": 7
+      },
+      {
+        "name": "Luke, Kanye, Dave, Mos und ich",
+        "hours": 4.72,
+        "events": 7
+      },
+      {
+        "name": "#6: Casper x Jürgen von der Lippe",
+        "hours": 4.64,
+        "events": 9
+      },
+      {
+        "name": "Oh, Du schöne Spargeltime",
+        "hours": 4.59,
+        "events": 5
+      },
+      {
+        "name": "Der Familienauslöscher",
+        "hours": 4.57,
+        "events": 8
+      },
+      {
+        "name": "Am toten Punkt",
+        "hours": 4.54,
+        "events": 10
+      },
+      {
+        "name": "Die Frau, die sich in Luft auflöste",
+        "hours": 4.48,
+        "events": 8
+      },
+      {
+        "name": "Sightseeing",
+        "hours": 4.48,
+        "events": 8
+      },
+      {
+        "name": "HG | 009 - Detlef Bierstedt",
+        "hours": 4.48,
+        "events": 6
+      },
+      {
+        "name": "Kosmetik und Pflege",
+        "hours": 4.43,
+        "events": 5
+      },
+      {
+        "name": "Fahri Yardim",
+        "hours": 4.41,
+        "events": 5
+      },
+      {
+        "name": "Endlich wieder Biathlon",
+        "hours": 4.4,
+        "events": 9
+      },
+      {
+        "name": "Naked Attraction",
+        "hours": 4.39,
+        "events": 11
+      },
+      {
+        "name": "Moralische Fragen",
+        "hours": 4.34,
+        "events": 10
+      },
+      {
+        "name": "Tödliche Begegnung",
+        "hours": 4.33,
+        "events": 11
+      },
+      {
+        "name": "Wieso machen Sie das?",
+        "hours": 4.31,
+        "events": 10
+      },
+      {
+        "name": "Ehrenhafte Welt",
+        "hours": 4.3,
+        "events": 4
+      },
+      {
+        "name": "HG | 018 - Charles Rettinghaus",
+        "hours": 4.26,
+        "events": 7
+      },
+      {
+        "name": "Die Pipi-Girls von Vegesack",
+        "hours": 4.22,
+        "events": 9
+      },
+      {
+        "name": "Unser Mann in Russland",
+        "hours": 4.2,
+        "events": 11
+      },
+      {
+        "name": "Höhle bauen",
+        "hours": 4.18,
+        "events": 6
+      },
+      {
+        "name": "Du Altes Suppenstück",
+        "hours": 4.14,
+        "events": 12
+      },
+      {
+        "name": "Laid Back In The Arms Of Summer",
+        "hours": 4.09,
+        "events": 8
+      },
+      {
+        "name": "#097: Star Wars | Imperiale Demokratur",
+        "hours": 4.06,
+        "events": 1
+      },
+      {
+        "name": "Autobiografie",
+        "hours": 4.03,
+        "events": 7
+      },
+      {
+        "name": "Ramen-Fix fürs Leben",
+        "hours": 3.94,
+        "events": 4
+      },
+      {
+        "name": "Unsere Luxusprobleme",
+        "hours": 3.9,
+        "events": 4
+      },
+      {
+        "name": "Milchreis und Bier",
+        "hours": 3.78,
+        "events": 8
+      },
+      {
+        "name": "Humans Of Late Capitalism",
+        "hours": 3.74,
+        "events": 9
+      },
+      {
+        "name": "Das Model und der Star",
+        "hours": 3.73,
+        "events": 6
+      },
+      {
+        "name": "#176 PLATTMACHMATTEN",
+        "hours": 3.73,
+        "events": 10
+      },
+      {
+        "name": "Warum Mediziner so oft Morde übersehen",
+        "hours": 3.68,
+        "events": 10
+      },
+      {
+        "name": "Zu faul für Sexsucht",
+        "hours": 3.65,
+        "events": 8
+      },
+      {
+        "name": "Oh Shit, Frau Schmidt!",
+        "hours": 3.64,
+        "events": 11
+      },
+      {
+        "name": "Die Erde hat Fieber",
+        "hours": 3.64,
+        "events": 5
+      },
+      {
+        "name": "Seemannsgarn und Räuberpistolen",
+        "hours": 3.6,
+        "events": 10
+      }
+    ]
+  },
+  "all": {
+    "time": {
+      "year": [
+        {
+          "name": "2014",
+          "value": 3.58
+        },
+        {
+          "name": "2016",
+          "value": 492.46
+        },
+        {
+          "name": "2017",
+          "value": 1171.21
+        },
+        {
+          "name": "2018",
+          "value": 1109.36
+        },
+        {
+          "name": "2019",
+          "value": 1044.96
+        },
+        {
+          "name": "2020",
+          "value": 943.33
+        },
+        {
+          "name": "2021",
+          "value": 629.25
+        },
+        {
+          "name": "2022",
+          "value": 1000.11
+        },
+        {
+          "name": "2023",
+          "value": 830.44
+        },
+        {
+          "name": "2024",
+          "value": 619.04
+        },
+        {
+          "name": "2025",
+          "value": 185.75
+        }
+      ],
+      "month": [
+        {
+          "name": "2014-03",
+          "value": 2.71
+        },
+        {
+          "name": "2014-04",
+          "value": 0.81
+        },
+        {
+          "name": "2014-05",
+          "value": 0.06
+        },
+        {
+          "name": "2016-07",
+          "value": 37.67
+        },
+        {
+          "name": "2016-08",
+          "value": 9.16
+        },
+        {
+          "name": "2016-09",
+          "value": 96.78
+        },
+        {
+          "name": "2016-10",
+          "value": 101.61
+        },
+        {
+          "name": "2016-11",
+          "value": 117.84
+        },
+        {
+          "name": "2016-12",
+          "value": 129.38
+        },
+        {
+          "name": "2017-01",
+          "value": 59.6
+        },
+        {
+          "name": "2017-02",
+          "value": 82.42
+        },
+        {
+          "name": "2017-03",
+          "value": 84.2
+        },
+        {
+          "name": "2017-04",
+          "value": 114.51
+        },
+        {
+          "name": "2017-05",
+          "value": 142.61
+        },
+        {
+          "name": "2017-06",
+          "value": 141.95
+        },
+        {
+          "name": "2017-07",
+          "value": 127.94
+        },
+        {
+          "name": "2017-08",
+          "value": 73.45
+        },
+        {
+          "name": "2017-09",
+          "value": 94.43
+        },
+        {
+          "name": "2017-10",
+          "value": 75.58
+        },
+        {
+          "name": "2017-11",
+          "value": 69.24
+        },
+        {
+          "name": "2017-12",
+          "value": 105.29
+        },
+        {
+          "name": "2018-01",
+          "value": 122.25
+        },
+        {
+          "name": "2018-02",
+          "value": 116.79
+        },
+        {
+          "name": "2018-03",
+          "value": 136.5
+        },
+        {
+          "name": "2018-04",
+          "value": 90.08
+        },
+        {
+          "name": "2018-05",
+          "value": 105.64
+        },
+        {
+          "name": "2018-06",
+          "value": 94.23
+        },
+        {
+          "name": "2018-07",
+          "value": 68.48
+        },
+        {
+          "name": "2018-08",
+          "value": 93.87
+        },
+        {
+          "name": "2018-09",
+          "value": 43.79
+        },
+        {
+          "name": "2018-10",
+          "value": 59.48
+        },
+        {
+          "name": "2018-11",
+          "value": 73.5
+        },
+        {
+          "name": "2018-12",
+          "value": 104.75
+        },
+        {
+          "name": "2019-01",
+          "value": 78.53
+        },
+        {
+          "name": "2019-02",
+          "value": 81.43
+        },
+        {
+          "name": "2019-03",
+          "value": 69.99
+        },
+        {
+          "name": "2019-04",
+          "value": 63.2
+        },
+        {
+          "name": "2019-05",
+          "value": 69.34
+        },
+        {
+          "name": "2019-06",
+          "value": 108.83
+        },
+        {
+          "name": "2019-07",
+          "value": 102.19
+        },
+        {
+          "name": "2019-08",
+          "value": 102.98
+        },
+        {
+          "name": "2019-09",
+          "value": 91.65
+        },
+        {
+          "name": "2019-10",
+          "value": 90.98
+        },
+        {
+          "name": "2019-11",
+          "value": 88.57
+        },
+        {
+          "name": "2019-12",
+          "value": 97.27
+        },
+        {
+          "name": "2020-01",
+          "value": 115.74
+        },
+        {
+          "name": "2020-02",
+          "value": 72.49
+        },
+        {
+          "name": "2020-03",
+          "value": 93.41
+        },
+        {
+          "name": "2020-04",
+          "value": 99.5
+        },
+        {
+          "name": "2020-05",
+          "value": 98.88
+        },
+        {
+          "name": "2020-06",
+          "value": 87.7
+        },
+        {
+          "name": "2020-07",
+          "value": 95.3
+        },
+        {
+          "name": "2020-08",
+          "value": 67.75
+        },
+        {
+          "name": "2020-09",
+          "value": 53.61
+        },
+        {
+          "name": "2020-10",
+          "value": 58.42
+        },
+        {
+          "name": "2020-11",
+          "value": 56.08
+        },
+        {
+          "name": "2020-12",
+          "value": 44.47
+        },
+        {
+          "name": "2021-01",
+          "value": 41.02
+        },
+        {
+          "name": "2021-02",
+          "value": 38.97
+        },
+        {
+          "name": "2021-03",
+          "value": 30.94
+        },
+        {
+          "name": "2021-04",
+          "value": 48.31
+        },
+        {
+          "name": "2021-05",
+          "value": 46.71
+        },
+        {
+          "name": "2021-06",
+          "value": 41.87
+        },
+        {
+          "name": "2021-07",
+          "value": 43.6
+        },
+        {
+          "name": "2021-08",
+          "value": 28.42
+        },
+        {
+          "name": "2021-09",
+          "value": 67.1
+        },
+        {
+          "name": "2021-10",
+          "value": 70.68
+        },
+        {
+          "name": "2021-11",
+          "value": 81.34
+        },
+        {
+          "name": "2021-12",
+          "value": 90.31
+        },
+        {
+          "name": "2022-01",
+          "value": 85.1
+        },
+        {
+          "name": "2022-02",
+          "value": 78.54
+        },
+        {
+          "name": "2022-03",
+          "value": 78.61
+        },
+        {
+          "name": "2022-04",
+          "value": 95.44
+        },
+        {
+          "name": "2022-05",
+          "value": 84.86
+        },
+        {
+          "name": "2022-06",
+          "value": 84.44
+        },
+        {
+          "name": "2022-07",
+          "value": 56.76
+        },
+        {
+          "name": "2022-08",
+          "value": 71.23
+        },
+        {
+          "name": "2022-09",
+          "value": 67.88
+        },
+        {
+          "name": "2022-10",
+          "value": 107.07
+        },
+        {
+          "name": "2022-11",
+          "value": 98.62
+        },
+        {
+          "name": "2022-12",
+          "value": 91.56
+        },
+        {
+          "name": "2023-01",
+          "value": 84.34
+        },
+        {
+          "name": "2023-02",
+          "value": 87.37
+        },
+        {
+          "name": "2023-03",
+          "value": 78.16
+        },
+        {
+          "name": "2023-04",
+          "value": 77.68
+        },
+        {
+          "name": "2023-05",
+          "value": 76.8
+        },
+        {
+          "name": "2023-06",
+          "value": 66.7
+        },
+        {
+          "name": "2023-07",
+          "value": 65.14
+        },
+        {
+          "name": "2023-08",
+          "value": 53.92
+        },
+        {
+          "name": "2023-09",
+          "value": 54.42
+        },
+        {
+          "name": "2023-10",
+          "value": 61.47
+        },
+        {
+          "name": "2023-11",
+          "value": 57.83
+        },
+        {
+          "name": "2023-12",
+          "value": 66.61
+        },
+        {
+          "name": "2024-01",
+          "value": 49.1
+        },
+        {
+          "name": "2024-02",
+          "value": 49.78
+        },
+        {
+          "name": "2024-03",
+          "value": 59.41
+        },
+        {
+          "name": "2024-04",
+          "value": 52.81
+        },
+        {
+          "name": "2024-05",
+          "value": 52.52
+        },
+        {
+          "name": "2024-06",
+          "value": 35.46
+        },
+        {
+          "name": "2024-07",
+          "value": 61.8
+        },
+        {
+          "name": "2024-08",
+          "value": 48.32
+        },
+        {
+          "name": "2024-09",
+          "value": 60.78
+        },
+        {
+          "name": "2024-10",
+          "value": 45.95
+        },
+        {
+          "name": "2024-11",
+          "value": 50.86
+        },
+        {
+          "name": "2024-12",
+          "value": 52.25
+        },
+        {
+          "name": "2025-01",
+          "value": 43.47
+        },
+        {
+          "name": "2025-02",
+          "value": 47.95
+        },
+        {
+          "name": "2025-03",
+          "value": 66.22
+        },
+        {
+          "name": "2025-04",
+          "value": 28.11
+        }
+      ],
+      "hour": [
+        {
+          "name": "00",
+          "value": 292.19
+        },
+        {
+          "name": "01",
+          "value": 227.76
+        },
+        {
+          "name": "02",
+          "value": 166.58
+        },
+        {
+          "name": "03",
+          "value": 148.03
+        },
+        {
+          "name": "04",
+          "value": 167.83
+        },
+        {
+          "name": "05",
+          "value": 302.1
+        },
+        {
+          "name": "06",
+          "value": 390.34
+        },
+        {
+          "name": "07",
+          "value": 368.71
+        },
+        {
+          "name": "08",
+          "value": 381.09
+        },
+        {
+          "name": "09",
+          "value": 413.39
+        },
+        {
+          "name": "10",
+          "value": 404.35
+        },
+        {
+          "name": "11",
+          "value": 361.01
+        },
+        {
+          "name": "12",
+          "value": 392.64
+        },
+        {
+          "name": "13",
+          "value": 360.11
+        },
+        {
+          "name": "14",
+          "value": 386.48
+        },
+        {
+          "name": "15",
+          "value": 459.89
+        },
+        {
+          "name": "16",
+          "value": 464.39
+        },
+        {
+          "name": "17",
+          "value": 416.55
+        },
+        {
+          "name": "18",
+          "value": 397.49
+        },
+        {
+          "name": "19",
+          "value": 341.96
+        },
+        {
+          "name": "20",
+          "value": 293.77
+        },
+        {
+          "name": "21",
+          "value": 285.25
+        },
+        {
+          "name": "22",
+          "value": 299.01
+        },
+        {
+          "name": "23",
+          "value": 308.6
+        }
+      ],
+      "weekday": [
+        {
+          "name": "Mo",
+          "value": 1247.43
+        },
+        {
+          "name": "Di",
+          "value": 1161.98
+        },
+        {
+          "name": "Mi",
+          "value": 1140.72
+        },
+        {
+          "name": "Do",
+          "value": 1069.35
+        },
+        {
+          "name": "Fr",
+          "value": 1157.08
+        },
+        {
+          "name": "Sa",
+          "value": 1080.03
+        },
+        {
+          "name": "So",
+          "value": 1172.9
+        }
+      ],
+      "countries": [
+        {
+          "name": "DE",
+          "value": 181485
+        },
+        {
+          "name": "PT",
+          "value": 1217
+        },
+        {
+          "name": "VN",
+          "value": 860
+        },
+        {
+          "name": "ZZ",
+          "value": 818
+        },
+        {
+          "name": "NZ",
+          "value": 815
+        },
+        {
+          "name": "JP",
+          "value": 532
+        },
+        {
+          "name": "AT",
+          "value": 460
+        },
+        {
+          "name": "HR",
+          "value": 197
+        },
+        {
+          "name": "IT",
+          "value": 179
+        },
+        {
+          "name": "QA",
+          "value": 165
+        },
+        {
+          "name": "ES",
+          "value": 154
+        },
+        {
+          "name": "FR",
+          "value": 154
+        }
+      ],
+      "platforms": [
+        {
+          "name": "Android OS 7.0 API 24 (samsung, SM-G925F)",
+          "value": 73626
+        },
+        {
+          "name": "android",
+          "value": 39138
+        },
+        {
+          "name": "Android OS 12 API 31 (samsung, SM-G973F)",
+          "value": 19089
+        },
+        {
+          "name": "Android OS 11 API 30 (samsung, SM-G973F)",
+          "value": 16888
+        },
+        {
+          "name": "Android OS 10 API 29 (samsung, SM-G973F)",
+          "value": 11544
+        },
+        {
+          "name": "Android OS 6.0.1 API 23 (samsung, SM-G925F)",
+          "value": 9779
+        },
+        {
+          "name": "OS X 10.11.6 [x86 4]",
+          "value": 2024
+        },
+        {
+          "name": "Partner SCEI sony_tv;ps4;;",
+          "value": 1982
+        },
+        {
+          "name": "OS X 10.12.5 [x86 4]",
+          "value": 1897
+        },
+        {
+          "name": "OS X 10.12.1 [x86 4]",
+          "value": 1108
+        },
+        {
+          "name": "Android OS 5.0.2 API 21 (HTC, HTC One)",
+          "value": 1039
+        },
+        {
+          "name": "OS X 10.13.3 [x86 4]",
+          "value": 1029
+        }
+      ]
     }
-  ],
-  "monthHours": [
-    {
-      "name": "2014-03",
-      "hours": 2.71
-    },
-    {
-      "name": "2014-04",
-      "hours": 0.81
-    },
-    {
-      "name": "2014-05",
-      "hours": 0.06
-    },
-    {
-      "name": "2016-07",
-      "hours": 37.67
-    },
-    {
-      "name": "2016-08",
-      "hours": 9.16
-    },
-    {
-      "name": "2016-09",
-      "hours": 96.78
-    },
-    {
-      "name": "2016-10",
-      "hours": 101.61
-    },
-    {
-      "name": "2016-11",
-      "hours": 117.84
-    },
-    {
-      "name": "2016-12",
-      "hours": 129.38
-    },
-    {
-      "name": "2017-01",
-      "hours": 59.6
-    },
-    {
-      "name": "2017-02",
-      "hours": 82.42
-    },
-    {
-      "name": "2017-03",
-      "hours": 84.2
-    },
-    {
-      "name": "2017-04",
-      "hours": 114.51
-    },
-    {
-      "name": "2017-05",
-      "hours": 142.61
-    },
-    {
-      "name": "2017-06",
-      "hours": 141.95
-    },
-    {
-      "name": "2017-07",
-      "hours": 127.94
-    },
-    {
-      "name": "2017-08",
-      "hours": 73.45
-    },
-    {
-      "name": "2017-09",
-      "hours": 94.43
-    },
-    {
-      "name": "2017-10",
-      "hours": 75.58
-    },
-    {
-      "name": "2017-11",
-      "hours": 69.24
-    },
-    {
-      "name": "2017-12",
-      "hours": 105.29
-    },
-    {
-      "name": "2018-01",
-      "hours": 122.25
-    },
-    {
-      "name": "2018-02",
-      "hours": 116.79
-    },
-    {
-      "name": "2018-03",
-      "hours": 136.5
-    },
-    {
-      "name": "2018-04",
-      "hours": 90.08
-    },
-    {
-      "name": "2018-05",
-      "hours": 105.64
-    },
-    {
-      "name": "2018-06",
-      "hours": 94.23
-    },
-    {
-      "name": "2018-07",
-      "hours": 68.48
-    },
-    {
-      "name": "2018-08",
-      "hours": 93.87
-    },
-    {
-      "name": "2018-09",
-      "hours": 43.79
-    },
-    {
-      "name": "2018-10",
-      "hours": 59.48
-    },
-    {
-      "name": "2018-11",
-      "hours": 73.5
-    },
-    {
-      "name": "2018-12",
-      "hours": 104.75
-    },
-    {
-      "name": "2019-01",
-      "hours": 78.53
-    },
-    {
-      "name": "2019-02",
-      "hours": 81.43
-    },
-    {
-      "name": "2019-03",
-      "hours": 69.99
-    },
-    {
-      "name": "2019-04",
-      "hours": 63.2
-    },
-    {
-      "name": "2019-05",
-      "hours": 69.34
-    },
-    {
-      "name": "2019-06",
-      "hours": 108.83
-    },
-    {
-      "name": "2019-07",
-      "hours": 102.19
-    },
-    {
-      "name": "2019-08",
-      "hours": 102.98
-    },
-    {
-      "name": "2019-09",
-      "hours": 91.65
-    },
-    {
-      "name": "2019-10",
-      "hours": 90.98
-    },
-    {
-      "name": "2019-11",
-      "hours": 88.57
-    },
-    {
-      "name": "2019-12",
-      "hours": 97.27
-    },
-    {
-      "name": "2020-01",
-      "hours": 115.74
-    },
-    {
-      "name": "2020-02",
-      "hours": 72.49
-    },
-    {
-      "name": "2020-03",
-      "hours": 93.41
-    },
-    {
-      "name": "2020-04",
-      "hours": 99.5
-    },
-    {
-      "name": "2020-05",
-      "hours": 98.88
-    },
-    {
-      "name": "2020-06",
-      "hours": 87.7
-    },
-    {
-      "name": "2020-07",
-      "hours": 95.3
-    },
-    {
-      "name": "2020-08",
-      "hours": 67.75
-    },
-    {
-      "name": "2020-09",
-      "hours": 53.61
-    },
-    {
-      "name": "2020-10",
-      "hours": 58.42
-    },
-    {
-      "name": "2020-11",
-      "hours": 56.08
-    },
-    {
-      "name": "2020-12",
-      "hours": 44.47
-    },
-    {
-      "name": "2021-01",
-      "hours": 41.02
-    },
-    {
-      "name": "2021-02",
-      "hours": 38.97
-    },
-    {
-      "name": "2021-03",
-      "hours": 30.94
-    },
-    {
-      "name": "2021-04",
-      "hours": 48.31
-    },
-    {
-      "name": "2021-05",
-      "hours": 46.71
-    },
-    {
-      "name": "2021-06",
-      "hours": 41.87
-    },
-    {
-      "name": "2021-07",
-      "hours": 43.6
-    },
-    {
-      "name": "2021-08",
-      "hours": 28.42
-    },
-    {
-      "name": "2021-09",
-      "hours": 67.1
-    },
-    {
-      "name": "2021-10",
-      "hours": 70.68
-    },
-    {
-      "name": "2021-11",
-      "hours": 81.34
-    },
-    {
-      "name": "2021-12",
-      "hours": 90.31
-    },
-    {
-      "name": "2022-01",
-      "hours": 85.1
-    },
-    {
-      "name": "2022-02",
-      "hours": 78.54
-    },
-    {
-      "name": "2022-03",
-      "hours": 78.61
-    },
-    {
-      "name": "2022-04",
-      "hours": 95.44
-    },
-    {
-      "name": "2022-05",
-      "hours": 84.86
-    },
-    {
-      "name": "2022-06",
-      "hours": 84.44
-    },
-    {
-      "name": "2022-07",
-      "hours": 56.76
-    },
-    {
-      "name": "2022-08",
-      "hours": 71.23
-    },
-    {
-      "name": "2022-09",
-      "hours": 67.88
-    },
-    {
-      "name": "2022-10",
-      "hours": 107.07
-    },
-    {
-      "name": "2022-11",
-      "hours": 98.62
-    },
-    {
-      "name": "2022-12",
-      "hours": 91.56
-    },
-    {
-      "name": "2023-01",
-      "hours": 84.34
-    },
-    {
-      "name": "2023-02",
-      "hours": 87.37
-    },
-    {
-      "name": "2023-03",
-      "hours": 78.16
-    },
-    {
-      "name": "2023-04",
-      "hours": 77.68
-    },
-    {
-      "name": "2023-05",
-      "hours": 76.8
-    },
-    {
-      "name": "2023-06",
-      "hours": 66.7
-    },
-    {
-      "name": "2023-07",
-      "hours": 65.14
-    },
-    {
-      "name": "2023-08",
-      "hours": 53.92
-    },
-    {
-      "name": "2023-09",
-      "hours": 54.42
-    },
-    {
-      "name": "2023-10",
-      "hours": 61.47
-    },
-    {
-      "name": "2023-11",
-      "hours": 57.83
-    },
-    {
-      "name": "2023-12",
-      "hours": 66.61
-    },
-    {
-      "name": "2024-01",
-      "hours": 49.1
-    },
-    {
-      "name": "2024-02",
-      "hours": 49.78
-    },
-    {
-      "name": "2024-03",
-      "hours": 59.41
-    },
-    {
-      "name": "2024-04",
-      "hours": 52.81
-    },
-    {
-      "name": "2024-05",
-      "hours": 52.52
-    },
-    {
-      "name": "2024-06",
-      "hours": 35.46
-    },
-    {
-      "name": "2024-07",
-      "hours": 61.8
-    },
-    {
-      "name": "2024-08",
-      "hours": 48.32
-    },
-    {
-      "name": "2024-09",
-      "hours": 60.78
-    },
-    {
-      "name": "2024-10",
-      "hours": 45.95
-    },
-    {
-      "name": "2024-11",
-      "hours": 50.86
-    },
-    {
-      "name": "2024-12",
-      "hours": 52.25
-    },
-    {
-      "name": "2025-01",
-      "hours": 43.47
-    },
-    {
-      "name": "2025-02",
-      "hours": 47.95
-    },
-    {
-      "name": "2025-03",
-      "hours": 66.22
-    },
-    {
-      "name": "2025-04",
-      "hours": 28.11
-    }
-  ],
-  "hourHours": [
-    {
-      "name": "00",
-      "hours": 292.19
-    },
-    {
-      "name": "01",
-      "hours": 227.76
-    },
-    {
-      "name": "02",
-      "hours": 166.58
-    },
-    {
-      "name": "03",
-      "hours": 148.03
-    },
-    {
-      "name": "04",
-      "hours": 167.83
-    },
-    {
-      "name": "05",
-      "hours": 302.1
-    },
-    {
-      "name": "06",
-      "hours": 390.34
-    },
-    {
-      "name": "07",
-      "hours": 368.71
-    },
-    {
-      "name": "08",
-      "hours": 381.09
-    },
-    {
-      "name": "09",
-      "hours": 413.39
-    },
-    {
-      "name": "10",
-      "hours": 404.35
-    },
-    {
-      "name": "11",
-      "hours": 361.01
-    },
-    {
-      "name": "12",
-      "hours": 392.64
-    },
-    {
-      "name": "13",
-      "hours": 360.11
-    },
-    {
-      "name": "14",
-      "hours": 386.48
-    },
-    {
-      "name": "15",
-      "hours": 459.89
-    },
-    {
-      "name": "16",
-      "hours": 464.39
-    },
-    {
-      "name": "17",
-      "hours": 416.55
-    },
-    {
-      "name": "18",
-      "hours": 397.49
-    },
-    {
-      "name": "19",
-      "hours": 341.96
-    },
-    {
-      "name": "20",
-      "hours": 293.77
-    },
-    {
-      "name": "21",
-      "hours": 285.25
-    },
-    {
-      "name": "22",
-      "hours": 299.01
-    },
-    {
-      "name": "23",
-      "hours": 308.6
-    }
-  ],
-  "weekdayHours": [
-    {
-      "name": "Mo",
-      "hours": 1247.43
-    },
-    {
-      "name": "Di",
-      "hours": 1161.98
-    },
-    {
-      "name": "Mi",
-      "hours": 1140.72
-    },
-    {
-      "name": "Do",
-      "hours": 1069.35
-    },
-    {
-      "name": "Fr",
-      "hours": 1157.08
-    },
-    {
-      "name": "Sa",
-      "hours": 1080.03
-    },
-    {
-      "name": "So",
-      "hours": 1172.9
-    }
-  ],
-  "topArtists": [
-    {
-      "name": "Jan Böhmermann",
-      "hours": 412.98
-    },
-    {
-      "name": "Die drei ???",
-      "hours": 166.48
-    },
-    {
-      "name": "Dan Brown",
-      "hours": 67.9
-    },
-    {
-      "name": "Andreas Eschbach",
-      "hours": 66.07
-    },
-    {
-      "name": "OG Keemo",
-      "hours": 64.26
-    },
-    {
-      "name": "Mac Miller",
-      "hours": 56.84
-    },
-    {
-      "name": "Argonautiks",
-      "hours": 43.28
-    },
-    {
-      "name": "Jazz Liberatorz",
-      "hours": 43.07
-    },
-    {
-      "name": "RIN",
-      "hours": 36.63
-    },
-    {
-      "name": "Rokko Weissensee",
-      "hours": 36.19
-    },
-    {
-      "name": "RAPK",
-      "hours": 29.37
-    },
-    {
-      "name": "Trettmann",
-      "hours": 27.82
-    },
-    {
-      "name": "Vince Staples",
-      "hours": 22.58
-    },
-    {
-      "name": "Yung Hurn",
-      "hours": 21.66
-    },
-    {
-      "name": "Heinz Strunk",
-      "hours": 18.89
-    }
-  ],
-  "topTracks": [
-    {
-      "name": "Episode 22: The Show Must Go On — Jan Böhmermann",
-      "hours": 16.88
-    },
-    {
-      "name": "Episode 45: Quote Quote Quote - das Leben ist gar nicht mal so schlecht — Jan Böhmermann",
-      "hours": 16.32
-    },
-    {
-      "name": "Gewitter Geräusche — Naturgeräusche",
-      "hours": 15.39
-    },
-    {
-      "name": "PEN — OG Keemo",
-      "hours": 15.08
-    },
-    {
-      "name": "Episode 48: Clickbait — Jan Böhmermann",
-      "hours": 12.73
-    },
-    {
-      "name": "Episode 44: Der große Narzissmus-Test — Jan Böhmermann",
-      "hours": 12.19
-    },
-    {
-      "name": "25/8 — OG Keemo",
-      "hours": 11.94
-    },
-    {
-      "name": "Episode 51: Willkommen Auf Schloss Olli — Jan Böhmermann",
-      "hours": 11.89
-    },
-    {
-      "name": "Episode 49: Umgezogene Jungs — Jan Böhmermann",
-      "hours": 11.78
-    },
-    {
-      "name": "I Am Hip Hop - Feat. Asheru — Jazz Liberatorz",
-      "hours": 11.66
-    },
-    {
-      "name": "Wieso?! — Kwam.E",
-      "hours": 11.58
-    },
-    {
-      "name": "Neptun — OG Keemo",
-      "hours": 11.25
-    },
-    {
-      "name": "Unter Schüben — dude26",
-      "hours": 11.2
-    },
-    {
-      "name": "spacejoints.flp — morten",
-      "hours": 11.19
-    },
-    {
-      "name": "Episode 26: Runterfahren — Jan Böhmermann",
-      "hours": 11.03
-    }
-  ],
-  "countries": [
-    {
-      "name": "DE",
-      "events": 181485
-    },
-    {
-      "name": "PT",
-      "events": 1217
-    },
-    {
-      "name": "VN",
-      "events": 860
-    },
-    {
-      "name": "ZZ",
-      "events": 818
-    },
-    {
-      "name": "NZ",
-      "events": 815
-    },
-    {
-      "name": "JP",
-      "events": 532
-    },
-    {
-      "name": "AT",
-      "events": 460
-    },
-    {
-      "name": "HR",
-      "events": 197
-    },
-    {
-      "name": "IT",
-      "events": 179
-    },
-    {
-      "name": "QA",
-      "events": 165
-    }
-  ],
-  "platforms": [
-    {
-      "name": "Android OS 7.0 API 24 (samsung, SM-G925F)",
-      "events": 73626
-    },
-    {
-      "name": "android",
-      "events": 39138
-    },
-    {
-      "name": "Android OS 12 API 31 (samsung, SM-G973F)",
-      "events": 19089
-    },
-    {
-      "name": "Android OS 11 API 30 (samsung, SM-G973F)",
-      "events": 16888
-    },
-    {
-      "name": "Android OS 10 API 29 (samsung, SM-G973F)",
-      "events": 11544
-    },
-    {
-      "name": "Android OS 6.0.1 API 23 (samsung, SM-G925F)",
-      "events": 9779
-    },
-    {
-      "name": "OS X 10.11.6 [x86 4]",
-      "events": 2024
-    },
-    {
-      "name": "Partner SCEI sony_tv;ps4;;",
-      "events": 1982
-    }
-  ],
-  "contextLink": "https://support.spotify.com/us/article/understanding-your-data/"
+  }
 }
